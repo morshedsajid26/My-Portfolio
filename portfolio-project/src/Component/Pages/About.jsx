@@ -29,7 +29,7 @@ const About = () => {
                         
                         <li className='border-b border-[#ffffff]/20 py-3' >Email: 
                             <span className='font-normal text-[#20c997]'>  
-                                <a href="neazmorshed407@gmail.com"> neazmorshed407@gmail.com</a>
+                                <a href="mailto:neazmorshed407@gmail.com"> neazmorshed407@gmail.com</a>
                             </span>
                             </li>
                         
