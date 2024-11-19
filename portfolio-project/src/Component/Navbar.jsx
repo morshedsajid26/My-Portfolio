@@ -5,7 +5,7 @@ import { FaFacebookF,FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between items-center px-3 py-4 bg-black '>
+    <div className='flex justify-between items-center px-3 py-4 bg-[#111111] fixed w-full z-10'>
       <div className="  logo w-[309px]"> 
         <h1 className='font-pop text-[30px] text-[#FAFAFA]'> Portfolio </h1>
       </div>
