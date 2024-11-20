@@ -9,7 +9,7 @@ const About = () => {
         <TitleHeader Heading="About me" Ptext="Know me more" />
 
         {/* About Me Section */}
-        <div className="aboutMe w-[95%] mx-auto md:w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6">
+        <div className="aboutMe w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6">
           {/* Text Section */}
           <div className="text w-full lg:w-[60%] text-center md:text-left">
             <h2 className="font-pop text-[22px] md:text-[28px] font-semibold text-[#ffffff]">
@@ -56,7 +56,7 @@ const About = () => {
             <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">10+</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Years Experience</p>
           </div>
-          <div className="one border-white/15 border-r-[.8px] md:border-r-[.8px] border-dotted py-5">
+          <div className="one border-white/15  md:border-r-[.8px] border-dotted py-5">
             <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">250+</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Happy Clients</p>
           </div>

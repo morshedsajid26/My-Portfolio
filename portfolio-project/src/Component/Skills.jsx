@@ -3,11 +3,11 @@ import SkillCard from './Layer/SkillCard'
 
 const Skills = ({className}) => {
   return (
-    <div className={`skills ${className}`}>
+    <div className={`skills   ${className}`}>
 
         <h2 className='text-white text-[24px] font-semibold mb-6'>My Skills</h2>
 
-       <div className='w-full grid grid-cols-2 gap-12  '>
+       <div className='w-full grid md:grid-cols-2 gap-12  '>
 
       
             <SkillCard

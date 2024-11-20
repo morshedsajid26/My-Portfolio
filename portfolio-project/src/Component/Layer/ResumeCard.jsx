@@ -1,30 +1,31 @@
-import React from 'react'
+import React from 'react';
 
-const ResumeCard = ({className,year,department,institute,details}) => {
+const ResumeCard = ({ className, year, department, institute, details }) => {
   return (
-    <div className={`w-[624px] p-6 bg-[#111418]  rounded-[6px] ${className}`}>
-                    
-    <p className=' text-[#ffffff] text-[14px] py-[4.9px] px-[9.1px] bg-[#dc3545] rounded w-[95px] mb-4'>
-          {year}
-   </p>
+    <div
+      className={`w-full max-w-[624px] p-6 bg-[#111418] rounded-[6px] shadow-lg ${className}`}
+    >
+      {/* Year Tag */}
+      <p className="text-[#ffffff] text-[14px] py-[5px] px-[10px] bg-[#dc3545] rounded w-max mb-4">
+        {year}
+      </p>
 
-   <h3 className=' text-[#ffffff] text-[21px] font-[500] mb-2'>
-   {department}
-    </h3>
+      {/* Department/Role */}
+      <h3 className="text-[#ffffff] text-[20px] sm:text-[21px] font-medium mb-2">
+        {department}
+      </h3>
 
-   <p className=' text-[#20c997] text-[16px] mb-4'>
-  {institute}
-   </p> 
+      {/* Institute/Organization */}
+      <p className="text-[#20c997] text-[16px] sm:text-[18px] mb-4">
+        {institute}
+      </p>
 
-   <p className=' text-[#ffffff]/50 text-[16px]'>
-  {details}
-   </p>
-   
+      {/* Details */}
+      <p className="text-[#ffffff]/50 text-[15px] sm:text-[16px] leading-relaxed">
+        {details}
+      </p>
+    </div>
+  );
+};
 
-
-
-</div>
-  )
-}
-
-export default ResumeCard
+export default ResumeCard;

@@ -10,8 +10,8 @@ const Contact = () => {
         <Container>
             <TitleHeader Heading='Contact' Ptext='Get in Touch'/>
 
-            <div className='flex font-pop '>
-                <div className='text w-[328px]'>
+            <div className='md:flex font-pop '>
+                <div className='text w-[328px] hidden md:block'>
                    
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
@@ -87,6 +87,63 @@ const Contact = () => {
                         Send Message
                     </button> 
                         </div>   
+                </div>
+
+                <div className='text w-[328px] block md:hidden'>
+                   
+                   <div className="address">
+                   <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
+                    <p className='text-[#dee3e4] text-[16px] w-[190px]'>
+                        House 42, Avenue 1, Block E, Mirpur 12, Dhaka 1216, Bangladesh
+                    </p>
+                   </div>
+
+                    <div className=' my-4'>
+                        
+                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] text-[16px]'>   
+                        <span className='text-[#20c997] text-[18px]'>  
+                            <FaPhone />
+                            </span>
+                         +880 1756899699
+                        </p>
+
+                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] text-[16px]'>                      
+                        <span className='text-[#20c997] text-[18px]' > 
+                            <MdEmail />
+                            </span>
+                        <a href="neazmorshed407@gmail.com">
+                        neazmorshed407@gmail.com
+                        </a>
+                        </p>
+                    </div>
+
+                    <div className="icon">
+                        <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4'>
+                            follow me
+                        </h2>
+
+                        <ul className='flex text-[#dddddd] gap-2.5' >
+                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
+                                <a href="#"><FaGithub /></a>
+                                </li>
+                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
+                                <a href="#"><FaFacebookF /></a>
+                                </li>
+                            <li className='w-[26px] h-[26px] flex items-center justify-center'>
+                                <a href="#"><FaLinkedinIn /></a>
+                            </li>
+                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
+                                <a href="#"><FaGoogle /></a>
+                                </li>
+                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
+                                <a href="#"><FaInstagram /></a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+
+
+
                 </div>
             </div>
         </Container>
