@@ -61,9 +61,13 @@ const Resume = () => {
         <Skills className="my-12" />
 
         {/* Download CV Button */}
-        <button className="py-3 px-10 text-[#6c757d] hover:text-[#ffffff] hover:bg-[#6c757d]/85 transition-all duration-300 rounded-full font-pop border-[#6c757d] border-[1.6px] text-[16px] font-[500] flex items-center justify-center mx-auto gap-2">
-          Download CV
-          <FaDownload />
+        <button className="py-3 px-10 text-[#6c757d] hover:text-[#ffffff] hover:bg-[#6c757d]/85 transition-all duration-300 rounded-full font-pop border-[#6c757d] border-[1.6px] text-[16px] font-[500] flex mx-auto">
+        
+        <a href="/CV.Sajid.pdf" download="CV.Sajid.pdf" className='flex items-center justify-center gap-2'>
+              Download CV
+              <FaDownload />
+         </a>
+
         </button>
       </Container>
     </div>

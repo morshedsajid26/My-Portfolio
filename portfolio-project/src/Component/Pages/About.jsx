@@ -44,8 +44,10 @@ const About = () => {
                 From: <span className="font-normal">Dhaka, Bangladesh</span>
               </li>
             </ul>
-            <button className="py-3 px-8 md:px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[14px] md:text-[16px] font-[500]">
+            <button  className="py-3 px-8 md:px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[14px] md:text-[16px] font-[500]">
+              <a href="/CV.Sajid.pdf" download="CV.Sajid.pdf">
               Download CV
+              </a>
             </button>
           </div>
         </div>
