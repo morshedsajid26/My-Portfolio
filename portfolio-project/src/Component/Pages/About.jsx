@@ -69,6 +69,14 @@ const About = () => {
                 </div>
 
             </div> */}
+
+            <div className='bg-slate-500 w-[1000px] grid grid-cols-2 gap-y-5 justify-between'>
+                <div className="one bg-slate-50 w-[200px]">1</div>
+                <div className="one bg-slate-200 w-[200px]">1</div>
+                <div className="one bg-slate-400 w-[200px]">1</div>
+                <div className="one bg-slate-100 w-[200px]">1</div>
+
+            </div>
         </Container>
     </div>
   )

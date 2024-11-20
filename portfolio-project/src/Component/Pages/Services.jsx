@@ -14,9 +14,10 @@ const Services = () => {
         <Container>
         <TitleHeader Heading='services' Ptext='what i do?'/>
 
-        <div className='flex justify-between'>
-        <div className='left flex flex-col gap-12'>
-            
+
+        <div className='w-full grid grid-cols-2 gap-12  '>
+
+
             <ServicePart 
             icon= {<RiComputerLine className='h-[30px] w-[33px]' />}  
             Heading='Web Development' 
@@ -35,12 +36,8 @@ const Services = () => {
             Heading='Integration Services' 
             pText='Connecting the frontend with APIs or backends to enable data fetching and interactivity.
             '/>
-           
-          
-        </div>
 
-        <div className='right flex flex-col gap-12'>
-            
+
             <ServicePart 
             icon= {<RiComputerLine className='h-[30px] w-[33px]' />}  
             Heading='Web Development' 
@@ -59,10 +56,11 @@ const Services = () => {
             Heading='Integration Services' 
             pText='Connecting the frontend with APIs or backends to enable data fetching and interactivity.
             '/>
-           
-          
+
+
         </div>
-        </div>
+
+        
         </Container>
     </div>
   )
