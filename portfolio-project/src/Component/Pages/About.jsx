@@ -49,7 +49,7 @@ const About = () => {
             </div>
 
 
-            {/* <div className='experience w-full grid grid-cols-4 text-center font-pop'>
+            <div className='experience w-full grid grid-cols-4 text-center font-pop'>
 
                 <div className="one w-[306px] grid-cols-1 border-white/15  border-r-[.8px] border-dotted py-5   ">
                     <h2 className='text-[48px] font-[500] text-[#ffffff]/50'>10+</h2>
@@ -68,15 +68,9 @@ const About = () => {
                     <p className='text-[#dee3e4] text-[16px]'>Get Awards</p>
                 </div>
 
-            </div> */}
-
-            <div className='bg-slate-500 w-[1000px] grid grid-cols-2 gap-y-5 justify-between'>
-                <div className="one bg-slate-50 w-[200px]">1</div>
-                <div className="one bg-slate-200 w-[200px]">1</div>
-                <div className="one bg-slate-400 w-[200px]">1</div>
-                <div className="one bg-slate-100 w-[200px]">1</div>
-
             </div>
+
+            
         </Container>
     </div>
   )
