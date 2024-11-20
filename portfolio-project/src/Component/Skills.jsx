@@ -12,26 +12,26 @@ const Skills = ({className}) => {
       
             <SkillCard
             Name='Web Design'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='90%'
+            width='w-[90%]'/>
 
 
             <SkillCard
             Name='HTML/CSS'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='95%'
+            width='w-[95%]'/>
 
 
             <SkillCard
             Name='Bootstrap'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='85%'
+            width='w-[85%]'/>
 
 
             <SkillCard
             Name='Tailwind'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='95%'
+            width='w-[95%]'/>
 
 
             <SkillCard
@@ -42,14 +42,14 @@ const Skills = ({className}) => {
 
             <SkillCard
             Name='React'
-            Percentage='65%'
+            Percentage='50%'
             width='w-[65%]'/>
 
 
             <SkillCard
             Name='Next.js'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='5%'
+            width='w-[5%]'/>
 
      
        </div>
