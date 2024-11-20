@@ -12,7 +12,7 @@ const Resume = () => {
         <TitleHeader Heading='summary' Ptext='resume'/>
 
         <div className='Resume flex justify-between mt-6  '>
-            <div className="left w-[624px] flex flex-col gap-6">
+            <div className="education w-[624px] flex flex-col gap-6">
                 <h2 className='text-white text-[24px] font-semibold'>My Education</h2>
 
                 <ResumeCard
@@ -30,7 +30,7 @@ const Resume = () => {
             </div>
 
 
-            <div className="left w-[624px] flex flex-col gap-6">
+            <div className="experience w-[624px] flex flex-col gap-6">
                 <h2 className='text-white text-[24px] font-semibold'>My Experience</h2>
 
                 <ResumeCard
