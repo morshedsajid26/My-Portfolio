@@ -43,7 +43,7 @@ const Skills = ({className}) => {
             <SkillCard
             Name='React'
             Percentage='50%'
-            width='w-[65%]'/>
+            width='w-[50%]'/>
 
 
             <SkillCard
