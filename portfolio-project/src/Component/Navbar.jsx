@@ -1,39 +1,68 @@
-import React from 'react'
-import Li from './Layer/Li'
+import React, { useState } from 'react';
+import Li from './Layer/Li';
 
-import { FaFacebookF,FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  return (
-    <div className='flex justify-between items-center px-3 py-4 bg-[#111111] fixed w-full z-10'>
-      <div className="  logo w-[309px]"> 
-        <h1 className='font-pop text-[30px] text-[#FAFAFA]'> Portfolio </h1>
-      </div>
-      <div className="  menu w-[615px] flex justify-between ">
-        <Li liText='Home' />
-        <Li liText='About' href='/about'/>
-        <Li liText='Services' href='/services'/>
-        <Li liText='Resume' href='/resume'/>
-        <Li liText='Portfolio' href='/portfolio'/>
-        <Li liText='Client' href='client'/>
-        <Li liText='Contact' href='contact'/>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  return (
+    <div className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-[#111111] fixed w-full z-30">
+      {/* Logo Section */}
+      <div className="logo flex-shrink-0 z-30 ">
+        <h1 className="font-pop text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
+          Portfolio
+        </h1>
       </div>
-      <div className=" icon w-[309px]">
-        <ul className='flex justify-end gap-3 text-[#FAFAFA] '>
-          <li className='w-[26px] h-[26px] flex items-center justify-center '>
-            <a href="#"><FaGithub /></a>
-            </li>
-          <li className='w-[26px] h-[26px] flex items-center justify-center '>
-            <a href="#"><FaFacebookF /></a>
-            </li>
-          <li className='w-[26px] h-[26px] flex items-center justify-center'>
-            <a href="#"><FaLinkedinIn /></a>
+
+      
+
+      {/* Menu Section */}
+      <div
+        className={`menu fixed md:static top-0 left-0 w-[50%] h-full  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all ${
+          isMenuOpen ? 'translate-x-0 ' : '-translate-x-full  md:translate-x-0'
+        } `}
+      >
+        <Li liText="Home" />
+        <Li liText="About" href="/about" />
+        <Li liText="Services" href="/services" />
+        <Li liText="Resume" href="/resume" />
+        <Li liText="Portfolio" href="/portfolio" />
+        <Li liText="Client" href="/client" />
+        <Li liText="Contact" href="/contact" />
+      </div>
+
+      {/* Icon Section */}
+      <div className="icon flex items-center justify-center flex-shrink-0">
+
+        {/* Hamburger Icon */}
+      <div className="md:hidden mt-[4px] mr-4">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+          {isMenuOpen ? <FaTimes size={24} color="#FAFAFA" /> : <FaBars size={24} color="#FAFAFA" />}
+        </button>
+      </div>
+
+
+        <ul className="flex justify-end gap-4 text-[#FAFAFA]">
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="#" aria-label="GitHub">
+              <FaGithub />
+            </a>
+          </li>
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="#" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+          </li>
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="#" aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
           </li>
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

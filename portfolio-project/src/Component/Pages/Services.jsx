@@ -15,7 +15,7 @@ const Services = () => {
         <TitleHeader Heading='services' Ptext='what i do?'/>
 
 
-        <div className='w-full grid grid-cols-2 gap-12  '>
+        <div className='w-full grid md:grid-cols-2 gap-12  '>
 
 
             <ServicePart 
