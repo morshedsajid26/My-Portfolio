@@ -11,7 +11,7 @@ const Contact = () => {
             <TitleHeader Heading='Contact' Ptext='Get in Touch'/>
 
             <div className='md:flex font-pop '>
-                <div className='text w-[328px] hidden md:block'>
+                <div className='text md:w-[328px] hidden md:block'>
                    
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
@@ -68,18 +68,18 @@ const Contact = () => {
 
                 </div>
 
-                <div className='form  w-[988px]'>
+                <div className='form  md:w-[988px]'>
                 <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4'>
                             send me a note
                         </h2>
 
-                 <div className='flex justify-between '>
-                    <input className='w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="text" placeholder='Name' />
+                 <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
+                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="text" placeholder='Name' />
 
-                    <input className='w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email" placeholder='Email' />
+                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email" placeholder='Email' />
                     </div> 
                     
-                    <textarea className='w-full h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  placeholder='Tell us more about your needs........'></textarea>  
+                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  placeholder='Tell us more about your needs........'></textarea>  
 
                     
                     <div className='text-center'>
@@ -89,7 +89,7 @@ const Contact = () => {
                         </div>   
                 </div>
 
-                <div className='text w-[328px] block md:hidden'>
+                <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
                    
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
