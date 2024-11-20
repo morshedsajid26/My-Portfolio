@@ -47,6 +47,28 @@ const About = () => {
                     </button>
                 </div>
             </div>
+
+
+            {/* <div className='experience w-full grid grid-cols-4 text-center font-pop'>
+
+                <div className="one w-[306px] grid-cols-1 border-white/15  border-r-[.8px] border-dotted py-5   ">
+                    <h2 className='text-[48px] font-[500] text-[#ffffff]/50'>10+</h2>
+                    <p className='text-[#dee3e4] text-[16px]'>Years Experience</p>
+                </div>
+                <div className="one w-[306px] grid-cols-1 border-white/15  border-r-[.8px] border-dotted py-5">
+                <h2 className='text-[48px] font-[500] text-[#ffffff]/50'>250+</h2>
+                <p className='text-[#dee3e4] text-[16px]'>Happy Clients</p>
+                </div>
+                <div className="one w-[306px] grid-cols-1 border-white/15  border-r-[.8px] border-dotted py-5">
+                <h2 className='text-[48px] font-[500] text-[#ffffff]/50'>650+</h2>
+                    <p className='text-[#dee3e4] text-[16px]'>Projects Done</p>
+                </div>
+                <div className="one w-[306px] grid-cols-1 py-5">
+                <h2 className='text-[48px] font-[500] text-[#ffffff]/50'>38</h2>
+                    <p className='text-[#dee3e4] text-[16px]'>Get Awards</p>
+                </div>
+
+            </div> */}
         </Container>
     </div>
   )
