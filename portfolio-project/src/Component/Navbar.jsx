@@ -11,7 +11,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="logo flex-shrink-0 z-30 ">
         <h1 className="font-pop text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
-          Portfolio
+          <a href="#services">Portfolio</a>
         </h1>
       </div>
 
