@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-[#111111] fixed w-full z-30">
+    <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-[#111111] fixed w-full z-30">
       {/* Logo Section */}
       <div className="logo flex-shrink-0 z-30 ">
         <h1 className="font-pop text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
@@ -24,12 +24,12 @@ const Navbar = () => {
         } `}
       >
         <Li liText="Home" />
-        <Li liText="About" href="/about" />
-        <Li liText="Services" href="/services" />
-        <Li liText="Resume" href="/resume" />
-        <Li liText="Portfolio" href="/portfolio" />
-        <Li liText="Client" href="/client" />
-        <Li liText="Contact" href="/contact" />
+        <Li liText="About" href="#about" />
+        <Li liText="Services" href="#services" />
+        <Li liText="Resume" href="#resume" />
+        <Li liText="Portfolio" href="#portfolio" />
+        <Li liText="Client" href="#client" />
+        <Li liText="Contact" href="#contact" />
       </div>
 
       {/* Icon Section */}
@@ -61,7 +61,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

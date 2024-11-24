@@ -4,7 +4,7 @@ import TitleHeader from '../Layer/TitleHeader';
 
 const About = () => {
   return (
-    <div className="bg-[#212529] py-[72px]">
+    <div id='about' className="bg-[#212529] py-[72px]">
       <Container>
         <TitleHeader Heading="About me" Ptext="Know me more" />
 

@@ -7,7 +7,7 @@ import { FaDownload } from 'react-icons/fa';
 
 const Resume = () => {
   return (
-    <div className="bg-[#212529] py-12 font-pop">
+    <div id='resume' className="bg-[#212529] py-12 font-pop">
       <Container>
         {/* Title Header */}
         <TitleHeader Heading="Summary" Ptext="Resume" />

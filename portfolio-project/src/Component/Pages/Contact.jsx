@@ -6,7 +6,7 @@ import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div className='bg-[#343a40] py-[72px]'>
+    <div id='contact' className='bg-[#343a40] py-[72px]'>
         <Container>
             <TitleHeader Heading='Contact' Ptext='Get in Touch'/>
 

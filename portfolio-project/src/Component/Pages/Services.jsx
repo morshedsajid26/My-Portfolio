@@ -10,7 +10,7 @@ import { RiComputerLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <div className='bg-[#343a40] py-[72px]'>
+    <div id='services' className='bg-[#343a40] py-[72px]'>
         <Container>
         <TitleHeader Heading='services' Ptext='what i do?'/>
 
