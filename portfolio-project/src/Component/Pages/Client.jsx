@@ -51,8 +51,8 @@ const settings = {
   speed: 2000,
   autoplaySpeed: 2000,
   cssEase: "linear",
-  nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+  // nextArrow: <SampleNextArrow />,
+  //   prevArrow: <SamplePrevArrow />
 };
 
 const Client = () => {
