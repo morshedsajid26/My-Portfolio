@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-[#111111] fixed w-full z-30">
       {/* Logo Section */}
-      <div className="logo flex-shrink-0 z-30 ">
+      <div className="logo z-30 ">
         <h1 className="font-pop text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
           <a href="#services">Portfolio</a>
         </h1>
@@ -19,7 +19,7 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[64px] top-full left-0 w-[50%] md:w-auto pt-20 md:pt-0 pb-[200px] md:pb-0  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 ${
+        className={`menu absolute md:static gap-x-[35px] top-full left-0 w-[50%] md:w-auto pt-20 md:pt-0 pb-[200px] md:pb-0  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 ${
           isMenuOpen ? 'translate-x-0 ' : '-translate-x-full  md:translate-x-0'
         } `}
       >
@@ -33,7 +33,7 @@ const Navbar = () => {
       </div>
 
       {/* Icon Section */}
-      <div className="icon flex items-center justify-center flex-shrink-0">
+      <div className="icon flex items-center justify-center">
 
         {/* Hamburger Icon */}
       <div className="md:hidden mt-[4px] mr-4">
