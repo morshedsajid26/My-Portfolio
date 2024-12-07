@@ -5,7 +5,7 @@ import ReviewCard from '../Layer/ReviewCard'
 
 import client1 from '/client1.png'
 import Slider from "react-slick";
-import { FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
+import {  FaStar } from 'react-icons/fa'
 
 
 // function SampleNextArrow(props) {
@@ -41,19 +41,7 @@ import { FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 
 
 
-const settings = {
-  dots: false,
-    infinite: true,
-    arrows: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 2000,
-  cssEase: "linear",
-  // nextArrow: <SampleNextArrow />,
-  //   prevArrow: <SamplePrevArrow />
-};
+
 
 const Client = () => {
 
@@ -67,8 +55,8 @@ const Client = () => {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+    // nextArrow: <SampleNextArrow />,
+    //   prevArrow: <SamplePrevArrow />
   };
 
 
@@ -78,41 +66,15 @@ const Client = () => {
          <Container>
         <TitleHeader Heading='testimonial' Ptext='client speak'/>
 
-       <div className='max-w-[1296px] max-h-[295px] overflow-hidden flex' >
+       <div className='max-w-[1296px]  ' >
        
 
 
 <Slider {...settings}>
 
-<div className='max-w-[550px]  bg-[#111418] p-[48px] '>
-        <div className='top flex items-center gap-4'>
-            
-                <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
 
-            <div>
-                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
-                Sajid
-                </p>
-                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
-                    User from Usa
-                </p>
-            </div>
 
-         </div>
 
-         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
-         “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
-            </p>
-
-            <span className='text-[#ffc107] flex gap-1'>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            
-            </span>
-    </div>
 
     <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
         <div className='top flex items-center gap-4'>
@@ -143,6 +105,9 @@ const Client = () => {
             
             </span>
     </div>
+
+
+   
 
 
 
