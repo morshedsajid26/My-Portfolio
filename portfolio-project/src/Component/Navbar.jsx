@@ -23,7 +23,7 @@ const Navbar = () => {
           isMenuOpen ? 'translate-x-0 ' : '-translate-x-full  md:translate-x-0'
         } `}
       >
-        <Li liText="Home" />
+        <Li liText="Home" href="#home" />
         <Li liText="About" href="#about" />
         <Li liText="Services" href="#services" />
         <Li liText="Resume" href="#resume" />

@@ -7,7 +7,7 @@ import Container from '../Layer/Container'
 const Home = () => {
 
   return (
-    <div className='pb-20 pt-[200px] bg-[#343a40] text-center relative '>
+    <div id='home' className='pb-20 pt-[200px] bg-[#343a40] text-center relative '>
     <Container className='pb-20'>
     <p className='text-[28px] font-medium text-white font-pop mb-4'>Welcome</p>
      
