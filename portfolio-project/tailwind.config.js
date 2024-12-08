@@ -9,7 +9,11 @@ export default {
     fontFamily:{
       'pop': ["Poppins", "sans-serif"]
     },
-    extend: {},
+    extend: {
+      animation: {
+        'bounce-slow': 'bounce 4s linear infinite',
+      }
+    },
   },
   plugins: [],
 }

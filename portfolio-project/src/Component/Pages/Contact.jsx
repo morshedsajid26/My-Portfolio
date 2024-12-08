@@ -14,7 +14,7 @@ const Contact = () => {
                 <div className='text md:w-[328px] hidden md:block'>
                    
                    <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
+                   <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4 '>Address</h2>
                     <p className='text-[#dee3e4] text-[16px] w-[190px]'>
                         House 42, Avenue 1, Block E, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
@@ -40,7 +40,7 @@ const Contact = () => {
                     </div>
 
                     <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4'>
+                        <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4'>
                             follow me
                         </h2>
 
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
 
                 <div className='form  md:w-[988px]'>
-                <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4'>
+                <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4'>
                             send me a note
                         </h2>
 
@@ -83,7 +83,7 @@ const Contact = () => {
 
                     
                     <div className='text-center'>
-                    <button className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-[500] '>
+                    <button className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
                         Send Message
                     </button> 
                         </div>   
@@ -92,7 +92,7 @@ const Contact = () => {
                 <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
                    
                    <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4 '>Address</h2>
+                   <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4 '>Address</h2>
                     <p className='text-[#dee3e4] text-[16px] w-[190px]'>
                         House 42, Avenue 1, Block E, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
@@ -118,7 +118,7 @@ const Contact = () => {
                     </div>
 
                     <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#ffffff] font-[500] mb-4'>
+                        <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4'>
                             follow me
                         </h2>
 

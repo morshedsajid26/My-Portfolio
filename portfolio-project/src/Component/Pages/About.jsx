@@ -44,7 +44,7 @@ const About = () => {
                 From: <span className="font-normal">Dhaka, Bangladesh</span>
               </li>
             </ul>
-            <button  className="py-3 px-8 md:px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[14px] md:text-[16px] font-[500]">
+            <button  className="py-3 px-8 md:px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[14px] md:text-[16px] font-medium">
               <a href="/CV.Sajid.pdf" download="CV.Sajid.pdf">
               Download CV
               </a>
@@ -55,19 +55,19 @@ const About = () => {
         {/* Experience Section */}
         <div className="experience w-full grid grid-cols-2  md:grid-cols-4 text-center font-pop gap-4 md:gap-0">
           <div className="one border-white/15 border-r-[.8px] md:border-r-[.8px] border-dotted py-5">
-            <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">10+</h2>
+            <h2 className="text-[36px] md:text-[48px] font-medium text-[#ffffff]/50">10+</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Years Experience</p>
           </div>
           <div className="one border-white/15  md:border-r-[.8px] border-dotted py-5">
-            <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">250+</h2>
+            <h2 className="text-[36px] md:text-[48px] font-medium text-[#ffffff]/50">250+</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Happy Clients</p>
           </div>
           <div className="one border-white/15 border-r-[.8px] md:border-r-[.8px] border-dotted py-5">
-            <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">650+</h2>
+            <h2 className="text-[36px] md:text-[48px] font-medium text-[#ffffff]/50">650+</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Projects Done</p>
           </div>
           <div className="one py-5">
-            <h2 className="text-[36px] md:text-[48px] font-[500] text-[#ffffff]/50">38</h2>
+            <h2 className="text-[36px] md:text-[48px] font-medium text-[#ffffff]/50">38</h2>
             <p className="text-[#dee3e4] text-[14px] md:text-[16px]">Get Awards</p>
           </div>
         </div>

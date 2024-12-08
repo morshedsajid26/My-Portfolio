@@ -15,7 +15,7 @@ const ServicePart = ({ Heading, pText, icon, className }) => {
 
       {/* Text Section */}
       <div className="text font-pop w-full">
-        <h2 className="text-[#ffffff] text-[18px] sm:text-[20px] font-[500] mb-2">
+        <h2 className="text-[#ffffff] text-[18px] sm:text-[20px] font-medium mb-2">
           {Heading}
         </h2>
         <p className="text-[14px] sm:text-[16px] text-[#ffffff]/50 leading-relaxed">

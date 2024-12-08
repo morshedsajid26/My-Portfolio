@@ -9,11 +9,13 @@ import Contact from './Component/Pages/Contact'
 import Footer from './Component/Footer'
 
 import whatsapp from '/whatsapp.png'
+import Home from './Component/Pages/Home'
 
 const App = () => {
   return (
     <div className='relative'>
       <Navbar/>
+      <Home/>
         <About/>
         <Services/>
         <Resume/>
