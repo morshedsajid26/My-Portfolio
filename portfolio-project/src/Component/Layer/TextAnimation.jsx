@@ -11,9 +11,9 @@ const TextAnimation = () => {
           loop={Infinity}
           cursor
           cursorStyle="|"
-          typeSpeed={70}
-          deleteSpeed={50}
-          delaySpeed={1000}
+          typeSpeed={100}
+          deleteSpeed={100}
+          delaySpeed={700}
         />
       </h1>
     </div>
