@@ -19,8 +19,8 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[35px] top-full left-0 w-[50%] md:w-auto pt-20 md:pt-0 pb-[200px] md:pb-0  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 ${
-          isMenuOpen ? 'translate-x-0 ' : '-translate-x-full  md:translate-x-0'
+        className={`menu absolute md:static gap-x-[35px] top-full left-0 h-[50%] md:h-full w-full md:w-auto py-[170px] md:py-0  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
+          isMenuOpen ? 'translate-y-0 ' : '-translate-y-[200%]  md:translate-y-0'
         } `}
       >
         <Li liText="Home" href="#home" />
