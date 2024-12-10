@@ -45,14 +45,14 @@ const Resume = () => {
               year="2023-2026"
               department="Junior Frontend Developer"
               institute="Tech Solutions Ltd."
-              details="Developed responsive web applications using React.js. Collaborated with cross-functional teams to deliver user-friendly interfaces."
+              details="Developed responsive web applications using React.js. "
             />
 
             <ResumeCard
               year="2023-2026"
               department="Freelance Web Developer"
               institute="Upwork & Fiverr"
-              details="Worked with multiple clients to build and maintain websites. Specialized in creating dynamic and engaging user experiences."
+              details="Worked with multiple clients to build and maintain websites. "
             />
           </div>
         </div>
