@@ -6,9 +6,7 @@ import ServicePart from '../Layer/ServicePart'
 import { RiComputerLine } from "react-icons/ri";
 import { HiLink, HiOutlineRocketLaunch } from 'react-icons/hi2';
 import { PiPaletteBold } from 'react-icons/pi';
-import { DiResponsive } from 'react-icons/di';
-import { FaMobileRetro } from 'react-icons/fa6';
-import { FaBug, FaLink, FaMobileAlt } from 'react-icons/fa';
+import { FaMobileAlt } from 'react-icons/fa';
 import { IoBugOutline } from 'react-icons/io5';
 
 
