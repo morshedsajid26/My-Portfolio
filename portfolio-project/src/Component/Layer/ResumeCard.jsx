@@ -3,7 +3,7 @@ import React from 'react';
 const ResumeCard = ({ className, year, department, institute, details }) => {
   return (
     <div
-      className={`w-full max-w-[624px] p-6 bg-[#111418] rounded-[6px] shadow-lg ${className}`}
+      className={`w-full h-[230px] max-w-[624px] p-6 bg-[#111418] rounded-[6px] shadow-lg ${className}`}
     >
       {/* Year Tag */}
       <p className="text-[#ffffff] text-[14px] py-[5px] px-[10px] bg-[#dc3545] rounded w-max mb-4">
