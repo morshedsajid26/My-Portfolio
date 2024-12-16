@@ -124,19 +124,19 @@ const Contact = () => {
 
                         <ul className='flex text-[#dddddd] gap-2.5' >
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaGithub /></a>
+                                <a href="https://github.com/morshedsajid26"><FaGithub /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaFacebookF /></a>
+                                <a href="https://www.facebook.com/snmsajid26"><FaFacebookF /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="#"><FaLinkedinIn /></a>
+                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid/"><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaGoogle /></a>
+                                <a href=""><FaGoogle /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaInstagram /></a>
+                                <a href="https://www.instagram.com/neaz_morshed_sajid/"><FaInstagram /></a>
                                 </li>
                             
                         </ul>
