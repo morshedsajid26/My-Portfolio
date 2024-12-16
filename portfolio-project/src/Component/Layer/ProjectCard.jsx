@@ -6,7 +6,7 @@ import orebi from '/Orebi.png'
 
 const ProjectCard = () => {
   return (
-    <div className={`relative after:bg-black/50 after:absolute after:content-[""] after:w-[500px] after:h-[300px] after:top-0 after:cursor-pointer after:hover:> `}>
+    <div className={`relative after:bg-black/50 after:absolute after:content-[""] after:w-[500px] after:h-[300px] after:top-0 after:cursor-pointer after:invisible group-hover/item:visible `}>
       
         <img className='w-[500px] h-[300px] ' src={orebi}  alt="" />
 

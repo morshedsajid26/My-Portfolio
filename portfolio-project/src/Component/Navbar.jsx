@@ -45,17 +45,17 @@ const Navbar = () => {
 
         <ul className="flex justify-end gap-4 text-[#FAFAFA]">
           <li className="w-[26px] h-[26px] flex items-center justify-center">
-            <a href="#" aria-label="GitHub">
+            <a href="https://github.com/morshedsajid26" aria-label="GitHub">
               <FaGithub />
             </a>
           </li>
           <li className="w-[26px] h-[26px] flex items-center justify-center">
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/snmsajid26" aria-label="Facebook">
               <FaFacebookF />
             </a>
           </li>
           <li className="w-[26px] h-[26px] flex items-center justify-center">
-            <a href="#" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/neaz-morshed-sajid/" aria-label="LinkedIn">
               <FaLinkedinIn />
             </a>
           </li>
