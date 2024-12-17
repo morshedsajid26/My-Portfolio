@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Layer/Container'
 import TitleHeader from '../Layer/TitleHeader'
-import { FaFacebookF, FaGithub, FaGoogle, FaGooglePlusG, FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
+import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
@@ -45,22 +45,24 @@ const Contact = () => {
                         </h2>
 
                         <ul className='flex text-[#dddddd] gap-2.5' >
+                        <li className="w-[26px] h-[26px] flex items-center justify-center">
+                                       <a href="https://github.com/morshedsajid26" aria-label="GitHub">
+                                         <FaGithub />
+                                       </a>
+                                     </li>
+
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaGithub /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaFacebookF /></a>
+                                <a href="https://www.facebook.com/snmsajid26" aria-label='Facebook'><FaFacebookF /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="#"><FaLinkedinIn /></a>
+                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaGoogle /></a>
+                                <a href=""><FaGoogle /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="#"><FaInstagram /></a>
+                                <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
                                 </li>
-                            
                         </ul>
                     </div>
 
@@ -133,13 +135,13 @@ const Contact = () => {
                                 <a href="https://www.facebook.com/snmsajid26" aria-label='Facebook'><FaFacebookF /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid/" aria-label=''><FaLinkedinIn /></a>
+                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
                                 <a href=""><FaGoogle /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.instagram.com/neaz_morshed_sajid/"><FaInstagram /></a>
+                                <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
                                 </li>
                             
                         </ul>
