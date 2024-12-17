@@ -123,14 +123,17 @@ const Contact = () => {
                         </h2>
 
                         <ul className='flex text-[#dddddd] gap-2.5' >
+                           <li className="w-[26px] h-[26px] flex items-center justify-center">
+                                       <a href="https://github.com/morshedsajid26" aria-label="GitHub">
+                                         <FaGithub />
+                                       </a>
+                                     </li>
+
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://github.com/morshedsajid26"><FaGithub /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.facebook.com/snmsajid26"><FaFacebookF /></a>
+                                <a href="https://www.facebook.com/snmsajid26" aria-label='Facebook'><FaFacebookF /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid/"><FaLinkedinIn /></a>
+                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid/" aria-label=''><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
                                 <a href=""><FaGoogle /></a>
