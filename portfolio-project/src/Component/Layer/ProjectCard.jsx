@@ -5,38 +5,38 @@ import { FiExternalLink } from 'react-icons/fi'
 
 
 
-const ProjectCard = () => {
+const ProjectCard = ( {title,tools1,tools2,tools3,tools4}) => {
   return (
-    <div className={`relative after: after: after:content-[""] after: after: after: after: after:invisible group-hover/item:visible font-pop `}>
+    <div className={`relative  font-pop`}>
       
-        <img className='w-[500px] h-[300px] ' src={orebi}  alt="" />
+        <img className='w-[500px] h-[300px] rounded-lg  ' src={orebi}  alt="" />
 
-        <div className=' absolute w-[500px]  h-[300px] top-0 cursor-pointer bg-black/50 flex flex-col justify-between'>
+        <div className=' absolute w-[500px]  h-[300px] top-0  bg-black/65 flex flex-col rounded-lg  '>
 
         
 
-        <h3 className='text-[47px]'>Orebi</h3>
+        <h3 className='text-[40px] text-white/70 text-center'>{title}</h3>
 
-       <div className=' flex justify-between'>
-       <div className="tools flex gap-3">
-          <h5 className='px-4 py-2 bg-slate-500 rounded-full font-semibold text-[16px]'>HTML5</h5>
-          <h5  className='px-4 py-2 bg-slate-500 rounded-full font-semibold text-[16px]'>Tailwind</h5>
-          <h5  className='px-4 py-2 bg-slate-500 rounded-full font-semibold text-[16px]'>JavaScript</h5>
-          <h5  className='px-4 py-2 bg-slate-500 rounded-full font-semibold text-[16px]'>React</h5>
+        <div className='mx-auto my-5'>
+
+        <h3 className='text-[22px] text-white/70 text-center'>Technologies</h3>
 
 
-
-
-
-
-
-
-          
+        <div className="tools flex gap-2 mt-5  ">
+          <h5 className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools1}</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools2}</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools3}</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools4}</h5>       
         </div>
 
+        </div>
 
-        <div className='px-3 py-2 bg-slate-500 rounded-full text-black w-10 flex justify-center items-center visibility-full'  >
-        <a href="">
+       <div className=' flex justify-between'>
+       
+
+
+        <div className='px-3 py-2 bg-[#212529]/80 text-white/70 rounded-full  flex justify-center items-center cursor-pointer mx-auto font-medium  mt-8'  >
+        <a className='flex justify-center items-center gap-2' href=""> <p>Live Link</p>
         <FiExternalLink  />
         </a>
         </div>

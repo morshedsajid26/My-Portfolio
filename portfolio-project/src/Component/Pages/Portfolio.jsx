@@ -9,7 +9,14 @@ const Portfolio = () => {
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
-        <ProjectCard/>
+        <ProjectCard
+        title='OREBI'
+        tools1='HTML5'
+        tools2='Tailwind CSS'
+        tools3='JavaScript'
+        tools4='React'
+        />
+
         </Container>
     </div>
   )
