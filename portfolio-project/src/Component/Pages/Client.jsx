@@ -43,6 +43,7 @@ import {  FaStar } from 'react-icons/fa'
 
 
 
+
 const Client = () => {
 
   const settings = {
@@ -52,8 +53,8 @@ const Client = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 3500,
+    autoplaySpeed: 3500,
     cssEase: "linear",
     // nextArrow: <SampleNextArrow />,
     //   prevArrow: <SamplePrevArrow />
@@ -66,7 +67,7 @@ const Client = () => {
          <Container>
         <TitleHeader Heading='testimonial' Ptext='client speak'/>
 
-       <div className='max-w-[1296px]  ' >
+       <div className='max-w-[1296px] h-[300px] overflow-hidden  ' >
        
 
 
@@ -106,6 +107,70 @@ const Client = () => {
             </span>
     </div>
 
+
+
+    <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
+        <div className='top flex items-center gap-4'>
+            
+                <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
+
+            <div>
+                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
+                Sajid
+                </p>
+                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
+                    User from Usa
+                </p>
+            </div>
+
+         </div>
+
+         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
+         “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
+            </p>
+
+            <span className='text-[#ffc107] flex gap-1'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            
+            </span>
+    </div>
+
+
+
+
+    <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
+        <div className='top flex items-center gap-4'>
+            
+                <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
+
+            <div>
+                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
+                Sajid
+                </p>
+                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
+                    User from Usa
+                </p>
+            </div>
+
+         </div>
+
+         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
+         “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
+            </p>
+
+            <span className='text-[#ffc107] flex gap-1'>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            
+            </span>
+    </div>
 
    
 
