@@ -5,7 +5,7 @@ import { FiExternalLink } from 'react-icons/fi'
 
 
 
-const ProjectCard = ( {title,tools1,tools2,tools3,tools4}) => {
+const ProjectCard = ( {}) => {
   return (
     <div className={`relative  font-pop `}>
       
@@ -15,7 +15,7 @@ const ProjectCard = ( {title,tools1,tools2,tools3,tools4}) => {
 
         
 
-        <h3 className='text-[40px] text-white/70 text-center'>{title}</h3>
+        <h3 className='text-[40px] text-white/70 text-center'>orebi</h3>
 
         <div className='mx-auto my-5'>
 
@@ -23,10 +23,10 @@ const ProjectCard = ( {title,tools1,tools2,tools3,tools4}) => {
 
 
         <div className="tools flex gap-2 mt-5  ">
-          <h5 className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools1}</h5>
-          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools2}</h5>
-          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools3}</h5>
-          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>{tools4}</h5>       
+          <h5 className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>HTML5</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>1</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>2</h5>
+          <h5  className='px-4 py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[16px]'>3</h5>       
         </div>
 
         </div>
