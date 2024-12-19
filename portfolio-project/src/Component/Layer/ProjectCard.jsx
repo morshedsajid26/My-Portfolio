@@ -7,11 +7,11 @@ import { FiExternalLink } from 'react-icons/fi'
 
 const ProjectCard = ( {title,tools1,tools2,tools3,tools4}) => {
   return (
-    <div className={`relative  font-pop`}>
+    <div className={`relative  font-pop `}>
       
         <img className='w-[500px] h-[300px] rounded-lg  ' src={orebi}  alt="" />
 
-        <div className=' absolute w-[500px]  h-[300px] top-0  bg-black/65 flex flex-col rounded-lg  '>
+        <div className=' absolute w-[500px]  h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
 
         
 
