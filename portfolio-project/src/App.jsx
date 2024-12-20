@@ -13,7 +13,7 @@ import Home from './Component/Pages/Home'
 
 const App = () => {
   return (
-    <div className='relative'>
+    <div className='relative overflow-hidden'>
       <Navbar/>
       <Home/>
         <About/>
