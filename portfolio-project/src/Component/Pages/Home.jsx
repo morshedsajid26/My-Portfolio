@@ -10,20 +10,20 @@ const Home = () => {
     setColor(isButton ? "#0d6efd" : "transparent");
   };
 
-  return (
+  return ( 
     <div 
       id='home' 
-      className='pb-20 pt-[150px] sm:pt-[200px] bg-[#343a40] text-center relative' 
+      className='pb-[230px] pt-[230px]  sm:pt-[200px] bg-[url(/public/sajid.jpg)] text-center relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:h-full after:w-full after:top-0 after:left-0 after:bg-black/35 z-0 after:-z-30' 
       onClick={() => handleClick(false)}
     >
-      <Container className='pb-20'>
+      <Container className=' '>
         {/* Welcome Text */}
-        <p className='text-[22px] sm:text-[28px] md:text-[32px] font-medium text-white font-pop mb-4'>
+        <p className='text-[22px] sm:text-[28px] md:text-[32px] font-medium text-white font-pop mb-4 z-30 '>
           Welcome
         </p>
 
         {/* TextAnimation */}
-        <TextAnimation />
+        <TextAnimation className='z-30' />
 
         {/* Location Text */}
         <p className='text-[18px] sm:text-[21px] md:text-[24px] text-white font-pop mb-6 mt-4'>
@@ -51,7 +51,7 @@ const Home = () => {
       </Container>
 
       {/* Down Arrow Icon */}
-      <div className='absolute bottom-4 sm:bottom-2 left-1/2 -translate-x-1/2 animate-bounce-slow'>
+      <div className='absolute bottom-4 sm:bottom-2 left-[49.5%] -translate-x-[49.5%] animate-bounce-slow'>
         <a href="#about">
           <FaChevronDown className='w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] md:w-[30px] md:h-[30px] text-white font-black' />
         </a>
