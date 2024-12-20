@@ -5,7 +5,7 @@ import ProjectCard from '../Layer/ProjectCard'
 
 import orebi from '/Orebi.png'
 import furnishop from '/Furnishop.png'
-import agence from '/Agence.png'
+import agenc from '/Agenc.png'
 
 
 import Slider from 'react-slick'
@@ -170,13 +170,13 @@ const Portfolio = () => {
 
            <div className={` relative  font-pop`}>
              
-               <img className='w-screen max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={agence}  alt="" />
+               <img className='w-screen max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={agenc}  alt="" />
        
                <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
-               <h3 className='text-[30px] md:text-[40px] text-white/70 text-center'>Agence</h3>
+               <h3 className='text-[30px] md:text-[40px] text-white/70 text-center'>Agenc</h3>
        
                <div className='mx-auto my-5'>
        
@@ -185,8 +185,8 @@ const Portfolio = () => {
        
                <div className="tools flex gap-2 mt-5  ">
                  <h5 className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold  text-[12px] md:text-[16px]'>HTML5</h5>
-                 <h5  className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]'>CSS3</h5>
-                 <h5  className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]'>Jquery</h5>
+                 <h5  className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]'>Bootstrap</h5>
+                 <h5  className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]'>jquery</h5>
                  <h5  className=' px-[10px] md:px-4 py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]'>JavaScript</h5>       
                </div>
        
@@ -197,7 +197,7 @@ const Portfolio = () => {
        
        
                <div className=' px-[10px] md:px-3 py-1 md:py-2 bg-[#212529]/80 text-white/70 rounded-full  flex justify-center items-center cursor-pointer mx-auto font-medium  mt-8'  >
-               <a className='flex justify-center items-center gap-2 text-[12px] md:text-[16px]' href="https://agence-snms.vercel.app/"> <p>Live Link</p>
+               <a className='flex justify-center items-center gap-2 text-[12px] md:text-[16px]' href="https://agenc-snms.vercel.app/"> <p>Live Link</p>
                <FiExternalLink  />
                </a>
                </div>
