@@ -5,7 +5,7 @@ import ReviewCard from '../Layer/ReviewCard'
 
 import client1 from '/client1.png'
 import Slider from "react-slick";
-import {  FaStar } from 'react-icons/fa'
+import {  FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 
 
 // function SampleNextArrow(props) {
@@ -46,19 +46,19 @@ import {  FaStar } from 'react-icons/fa'
 
 const Client = () => {
 
-  const settings = {
-    dots: false,
-      infinite: true,
-      arrows: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 3500,
-    autoplaySpeed: 3500,
-    cssEase: "linear",
-    // nextArrow: <SampleNextArrow />,
-    //   prevArrow: <SamplePrevArrow />
-  };
+//   const settings = {
+//     dots: false,
+//       infinite: true,
+//       arrows: true,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     speed: 3500,
+//     autoplaySpeed: 3500,
+//     cssEase: "linear",
+//     nextArrow: <SampleNextArrow />,
+//       prevArrow: <SamplePrevArrow />
+//   };
 
 
 
@@ -67,7 +67,7 @@ const Client = () => {
          <Container>
         <TitleHeader Heading='testimonial' Ptext='client speak'/>
 
-       <div className='max-w-[1296px] h-[300px] overflow-hidden  ' >
+       {/* <div className='max-w-[1296px] h-[300px] overflow-hidden  ' >
        
 
 
@@ -186,7 +186,9 @@ const Client = () => {
 
    
       </Slider>
-       </div>
+       </div> */}
+
+       <p className='font-pop text-white text-center text-[20px] md:text-[24px]  font-medium'> Review are not available. </p>
 
 
       

@@ -10,7 +10,7 @@ import { FiExternalLink } from 'react-icons/fi'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 
 
@@ -19,6 +19,35 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
+function SampleNextArrow(props) {
+  const {  style, onClick } = props;
+  return (
+    <div
+      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-1/2 translate-x-1/2 bottom-[-150%] -translate-y-[-150%] md:left-[74px]  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
+      style={{ ...style, display: "flex", background: "" }}
+      onClick={onClick}
+    >
+      <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+        <FaArrowRight/>
+      </div>
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const {  style, onClick } = props;
+  return (
+    <div
+     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/4 translate-x-1/3 bottom-[-150%] -translate-y-[-150%] md:left-0 md:translate-x-0  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
+      style={{ ...style,display: "flex",background: "" }}
+      onClick={onClick}
+    >
+       <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+        <FaArrowLeft/>
+       </div>
+    </div>
+  );
+}
 
 
 const Portfolio = () => {
