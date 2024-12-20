@@ -77,11 +77,11 @@ const Portfolio = () => {
 
         
        
-         <div className={` relative  font-pop`}>
+         <div className={` relative w-screen max-w-[624px]  font-pop`}>
              
-               <img className='w-screen max-w-[624px]  h-[300px] rounded-lg  ' src={orebi}  alt="" />
+               <img className='w-screen max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px]top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
@@ -125,9 +125,9 @@ const Portfolio = () => {
 
            <div className={` relative  font-pop`}>
              
-               <img className='w-screen max-w-[624px]  h-[300px] rounded-lg  ' src={furnishop}  alt="" />
+               <img className='w-screen max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={furnishop}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
