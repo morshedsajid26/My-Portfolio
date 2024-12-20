@@ -81,7 +81,7 @@ const Portfolio = () => {
              
                <img className='w-screen max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px]top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
