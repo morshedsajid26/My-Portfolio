@@ -152,7 +152,7 @@ const Portfolio = () => {
        
        
                <div className=' px-[10px] md:px-3 py-1 md:py-2 bg-[#212529]/80 text-white/70 rounded-full  flex justify-center items-center cursor-pointer mx-auto font-medium  mt-8'  >
-               <a className='flex justify-center items-center gap-2 text-[12px] md:text-[16px]' href="furni-shop-snms.vercel.app"> <p>Live Link</p>
+               <a className='flex justify-center items-center gap-2 text-[12px] md:text-[16px]' href="https://furni-shop-snms.vercel.app/"> <p>Live Link</p>
                <FiExternalLink  />
                </a>
                </div>
