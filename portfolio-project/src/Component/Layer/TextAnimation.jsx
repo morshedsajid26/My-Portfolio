@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const TextAnimation = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center  h-[100px]">
       <h1 className="text-[32px] sm:text-[48px] md:text-[64px] lg:text-[72px] font-semibold text-[#ffffff] font-pop">
         I'm 
         <Typewriter
