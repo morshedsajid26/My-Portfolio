@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Layer/Container'
 import TitleHeader from '../Layer/TitleHeader'
-import ProjectCard from '../Layer/ProjectCard'
+
 
 import orebi from '/Orebi.png'
 import furnishop from '/Furnishop.png'
@@ -22,18 +22,48 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 
 
+// function SampleNextArrow(props) {
+//   const {  style, onClick } = props;
+//   return (
+//     <div
+//       className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-1/2 translate-x-1/2 bottom-[-150%] -translate-y-[-150%] md:left-[74px]  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
+//       style={{ ...style, display: "flex", background: "" }}
+//       onClick={onClick}
+//     >
+//       <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+//         <FaArrowRight/>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function SamplePrevArrow(props) {
+//   const {  style, onClick } = props;
+//   return (
+//     <div
+//      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/4 translate-x-1/3 bottom-[-150%] -translate-y-[-150%] md:left-0 md:translate-x-0  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
+//       style={{ ...style,display: "flex",background: "" }}
+//       onClick={onClick}
+//     >
+//        <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+//         <FaArrowLeft/>
+//        </div>
+//     </div>
+//   );
+// }
+
+
 function SampleNextArrow(props) {
-  const {  style, onClick } = props;
+  const { className, style, onClick } = props;
   return (
     <div
-      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-1/2 translate-x-1/2 bottom-[-150%] -translate-y-[-150%] md:left-[74px]  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
-      style={{ ...style, display: "flex", background: "" }}
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
       onClick={onClick}
     >
-      <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-        <FaArrowRight/>
+
+
       </div>
-    </div>
   );
 }
 
@@ -41,14 +71,16 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/4 translate-x-1/3 bottom-[-150%] -translate-y-[-150%] md:left-0 md:translate-x-0  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
-      style={{ ...style,display: "flex",background: "" }}
+      className='absolute bottom-0 '
+      style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     >
-       <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-        <FaArrowLeft/>
-       </div>
-    </div>
+
+      <div>
+      <FaArrowLeft/>
+
+      </div>
+      </div>
   );
 }
 
@@ -72,14 +104,14 @@ const Portfolio = () => {
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
-        <div className='w-[1296px] h-[300px]   overflow-hidden  gap-[48px]'>
+        <div className='w-[1296px] h-[300px]   overflow-hidden  gap-[48px] '>
   
         
         <Slider {...settings}>
 
         
        
-         <div className={` relative w-screen max-w-[624px]  font-pop`}>
+         <div className={` relative w-screen max-w-[624px]   font-pop`}>
              
                <img className='w-screen max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
        
