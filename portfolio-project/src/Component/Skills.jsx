@@ -29,21 +29,21 @@ const Skills = ({className}) => {
 
 
             <SkillCard
-            Name='Tailwind'
+            Name='Tailwind CSS'
             Percentage='95%'
             width='w-[95%]'/>
 
 
             <SkillCard
             Name='JavaScript'
-            Percentage='65%'
-            width='w-[65%]'/>
+            Percentage='40%'
+            width='w-[40%]'/>
 
 
             <SkillCard
             Name='React'
-            Percentage='50%'
-            width='w-[50%]'/>
+            Percentage='40%'
+            width='w-[40%]'/>
 
 
             <SkillCard
