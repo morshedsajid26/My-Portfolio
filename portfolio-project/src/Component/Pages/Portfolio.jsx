@@ -23,51 +23,18 @@ import { FaArrowLeftLong } from 'react-icons/fa6'
 
 
 
-// function SampleNextArrow(props) {
-//   const {  style, onClick } = props;
-//   return (
-//     <div
-//       className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-1/2 translate-x-1/2 bottom-[-150%] -translate-y-[-150%] md:left-[74px]  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
-//       style={{ ...style, display: "flex", background: "" }}
-//       onClick={onClick}
-//     >
-//       <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-//         <FaArrowRight/>
-//       </div>
-//     </div>
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const {  style, onClick } = props;
-//   return (
-//     <div
-//      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/4 translate-x-1/3 bottom-[-150%] -translate-y-[-150%] md:left-0 md:translate-x-0  md:bottom-[-45px] md:-translate-y-[-45px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer '
-//       style={{ ...style,display: "flex",background: "" }}
-//       onClick={onClick}
-//     >
-//        <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-//         <FaArrowLeft/>
-//        </div>
-//     </div>
-//   );
-// }
-
-
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const {  style, onClick } = props;
   return (
     <div
-    className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  top-1/2  -translate-y-1/2 right-1 rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer z-10 '
-     style={{ ...style, display: "flex", background: "green" }}
-     onClick={onClick}
-   >
-
-<div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-     <FaArrowRight/>
-
-     </div>
-     </div>
+      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-[580px] -bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer  z-10  '
+      style={{ ...style, display: "flex", background: "" }}
+      onClick={onClick}
+    >
+      <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+        <FaArrowRight/>
+      </div>
+    </div>
   );
 }
 
@@ -75,18 +42,19 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  top-1/2  -translate-y-1/2 left-1 rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer z-10'
-      style={{ ...style, display: "flex", background: "green" }}
+     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-[555px] -bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer z-10  '
+      style={{ ...style,display: "flex",background: "" }}
       onClick={onClick}
     >
-
-<div className='w-full h-full flex items-center justify-center transition-all duration-300'>
-      <FaArrowLeft/>
-
-      </div>
-      </div>
+       <div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+        <FaArrowLeft/>
+       </div>
+    </div>
   );
 }
+
+
+
 
 
 const Portfolio = () => {
@@ -104,7 +72,7 @@ const Portfolio = () => {
 
   
   return (
-    <div id='portfolio' className='bg-[#343a40] py-[72px]'>
+    <div id='portfolio' className='bg-[#343a40] pt-[72px] pb-[100px]'>
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
