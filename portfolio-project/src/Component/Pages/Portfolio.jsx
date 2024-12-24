@@ -14,6 +14,7 @@ import { FiExternalLink } from 'react-icons/fi'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import { FaArrowLeftLong } from 'react-icons/fa6'
 
 
 
@@ -57,13 +58,16 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    >
+    className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  top-1/2  -translate-y-1/2 right-1 rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer z-10 '
+     style={{ ...style, display: "flex", background: "green" }}
+     onClick={onClick}
+   >
 
+<div className='w-full h-full flex items-center justify-center transition-all duration-300'>
+     <FaArrowRight/>
 
-      </div>
+     </div>
+     </div>
   );
 }
 
@@ -71,12 +75,12 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-      className='absolute bottom-0 '
-      style={{ ...style, display: "block", background: "green" }}
+     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  top-1/2  -translate-y-1/2 left-1 rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#286F6C]  transition-all duration-300 cursor-pointer z-10'
+      style={{ ...style, display: "flex", background: "green" }}
       onClick={onClick}
     >
 
-      <div>
+<div className='w-full h-full flex items-center justify-center transition-all duration-300'>
       <FaArrowLeft/>
 
       </div>
@@ -104,14 +108,14 @@ const Portfolio = () => {
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
-        <div className='w-[1296px] h-[300px]   overflow-hidden  gap-[48px] '>
+        <div className='w-[1296px] h-[300px]   '>
   
         
         <Slider {...settings}>
 
         
        
-         <div className={` relative w-screen max-w-[624px]   font-pop`}>
+         <div className={` relative   font-pop`}>
              
                <img className='w-screen max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
        
