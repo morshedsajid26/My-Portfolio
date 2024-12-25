@@ -27,7 +27,7 @@ function SampleNextArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-[580px] -bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  '
+      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-[187px] -bottom-10 md:right-[580px] md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  '
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
@@ -42,7 +42,7 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-[555px] -bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  '
+     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] -bottom-10 left-[122px]  md:left-[555px] md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  '
       style={{ ...style,display: "flex",background: "" }}
       onClick={onClick}
     >
@@ -76,7 +76,7 @@ const Portfolio = () => {
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
-        <div className='w-[1296px] h-[300px]   '>
+        <div className='w-[1296px]  h-[300px]   '>
   
         
         <Slider {...settings}>
