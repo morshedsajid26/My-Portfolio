@@ -137,19 +137,19 @@ const Portfolio = () => {
             <SliderCard
               image={orebi}
               techs={["HTML5", "Tailwind CSS", "Javascript", "React"]}
-              name={"Orebi"}
+              name={"OREBI"}
               link={""}
             />
             <SliderCard
               image={furnishop}
               techs={["HTML5", "Tailwind CSS", "Javascript", "React"]}
-              name={"Orebi"}
+              name={"FurniShop"}
               link={"https://furni-shop-snms.vercel.app"}
             />
             <SliderCard
               image={agenc}
               techs={["HTML5", "Bootstrap", "jquery", "Javascript"]}
-              name={"OREBI"}
+              name={"Agenc"}
               link={"https://agenc-snms.vercel.app/"}
             />
 
