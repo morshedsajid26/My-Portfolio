@@ -27,7 +27,7 @@ function SampleNextArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-[187px] -bottom-10 md:right-[580px] md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  '
+      className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-[580px] -bottom-10  md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  '
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
@@ -42,7 +42,7 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] -bottom-10 left-[122px]  md:left-[555px] md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  '
+     className='absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] -bottom-10 left-[580px] md:-bottom-[60px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  '
       style={{ ...style,display: "flex",background: "" }}
       onClick={onClick}
     >
@@ -76,7 +76,7 @@ const Portfolio = () => {
          <Container>
         <TitleHeader Heading='portfolio' Ptext='my work'/>
 
-        <div className='w-[1296px]  h-[300px]   '>
+        <div className='w-full md:max-w-[1296px]  h-[300px] flex flex-col gap-[48px]  '>
   
         
         <Slider {...settings}>
@@ -85,9 +85,9 @@ const Portfolio = () => {
        
          <div className={` relative   font-pop`}>
              
-               <img className='w-screen max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
+               <img className='w-full md:max-w-[624px] h-[230px]  md:h-[300px] rounded-lg  ' src={orebi}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-full md:max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
@@ -131,9 +131,9 @@ const Portfolio = () => {
 
            <div className={` relative  font-pop`}>
              
-               <img className='w-screen max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={furnishop}  alt="" />
+               <img className='w-full md:max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={furnishop}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-full md:max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
@@ -174,9 +174,9 @@ const Portfolio = () => {
 
            <div className={` relative  font-pop`}>
              
-               <img className='w-screen max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={agenc}  alt="" />
+               <img className='w-full md:max-w-[624px]  h-[230px]  md:h-[300px] rounded-lg  ' src={agenc}  alt="" />
        
-               <div className=' absolute w-screen max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
+               <div className=' absolute w-full md:max-w-[624px]   h-[230px]  md:h-[300px] top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500  '>
        
                
        
