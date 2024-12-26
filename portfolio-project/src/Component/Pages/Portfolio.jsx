@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
-      <div className="w-full h-full flex items-center justify-center transition-all duration-300">
+      <div className="w-full h-full flex items-center justify-center transition-all duration-500">
         <FaArrowRight />
       </div>
     </div>
@@ -34,7 +34,7 @@ function SamplePrevArrow(props) {
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
-      <div className="w-full h-full flex items-center justify-center transition-all duration-300">
+      <div className="w-full h-full flex items-center justify-center transition-all duration-500">
         <FaArrowLeft />
       </div>
     </div>
@@ -47,20 +47,20 @@ let SliderCard = ({ image, name, techs, link }) => {
       <img className="h-full w-full rounded-lg  " src={image} alt={image} />
 
       <div className=" h-full w-full absolute top-0  bg-black/65 flex flex-col rounded-lg opacity-0 hover:opacity-100 transition-all duration-500 justify-between pb-3">
-        <h3 className="text-[30px] md:text-[40px] text-white/70 text-center">
+        <h3 className="text-[25px] md:text-[40px] text-white/70 text-center">
           {name}
         </h3>
 
         <div className="mx-auto ">
-          <h3 className="text-[18px] md:text-[22px] text-white/70 text-center">
+          <h3 className="text-[16px] md:text-[22px] text-white/70 text-center">
             Technologies
           </h3>
 
-          <div className="tools flex gap-2 mt-5  ">
+          <div className="tools flex gap-2 mt-3  ">
             {techs.map((item, index) => (
               <h5
                 key={index}
-                className=" px-[10px] md:px-4  py-1  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold  text-xs md:text-base lg:text-sm xl:text-base"
+                className=" px-1 md:px-4  py-[3px]  md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold  text-[12px] md:text-[16px] lg:text-sm xl:text-base"
               >
                 {item}
               </h5>
@@ -69,7 +69,7 @@ let SliderCard = ({ image, name, techs, link }) => {
         </div>
 
         <div className=" flex justify-between">
-          <div className=" px-[10px] md:px-3 py-1 md:py-2 bg-[#212529]/80 text-white/70 rounded-full  flex justify-center items-center cursor-pointer mx-auto font-medium  mt-8">
+          <div className=" px-[10px] md:px-3 py-1 md:py-2 bg-[#212529]/80 text-white/70 rounded-full  flex justify-center items-center cursor-pointer mx-auto font-medium  mt-5">
             <a
               className="flex justify-center items-center gap-2 text-[12px] md:text-[16px]"
               href={link}
