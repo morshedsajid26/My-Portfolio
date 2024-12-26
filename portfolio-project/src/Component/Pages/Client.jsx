@@ -188,7 +188,7 @@ const Client = () => {
       </Slider>
        </div> */}
 
-       <p className='font-pop text-white text-center text-[20px] md:text-[24px]  font-medium'> Review are not available. </p>
+       <p className='font-pop text-white text-center text-[20px] md:text-[24px]  font-medium'> Reviews are not available. </p>
 
 
       
