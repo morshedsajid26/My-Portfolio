@@ -116,7 +116,7 @@ const Contact = () => {
                     <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  name="message"
         value={formData.message}
         onChange={handleChange}
-        required  placeholder='Tell us more about your needs........'></textarea>  
+        required  placeholder='Tell me more about your needs........'></textarea>  
 
                     
                     <div className='text-center'>
