@@ -86,7 +86,7 @@ const Contact = () => {
                                 <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href=""><FaGoogle /></a>
+                                <a href="mailto:neazmorshed407@gmail.com"><FaGoogle /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
                                 <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
@@ -173,7 +173,7 @@ const Contact = () => {
                                 <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
                             </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href=""><FaGoogle /></a>
+                                <a href="mailto:neazmorshed407@gmail.com"><FaGoogle /></a>
                                 </li>
                             <li className='w-[26px] h-[26px] flex items-center justify-center '>
                                 <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
