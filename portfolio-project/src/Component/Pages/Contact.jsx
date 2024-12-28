@@ -5,6 +5,11 @@ import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  }
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert("Message sent!");
+      };
   return (
     <div id='contact' className='bg-[#343a40] py-[72px]'>
         <Container>
@@ -33,7 +38,7 @@ const Contact = () => {
                         <span className='text-[#20c997] text-[18px]' > 
                             <MdEmail />
                             </span>
-                        <a href="neazmorshed407@gmail.com">
+                        <a href="mailto:neazmorshed407@gmail.com">
                         neazmorshed407@gmail.com
                         </a>
                         </p>
@@ -70,7 +75,7 @@ const Contact = () => {
 
                 </div>
 
-                <div className='form  md:w-[988px]'>
+                <div onSubmit={handleSubmit} className='form  md:w-[988px]'>
                 <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4'>
                             send me a note
                         </h2>
@@ -113,7 +118,7 @@ const Contact = () => {
                         <span className='text-[#20c997] text-[18px]' > 
                             <MdEmail />
                             </span>
-                        <a href="neazmorshed407@gmail.com">
+                        <a href="mailto:neazmorshed407@gmail.com">
                         neazmorshed407@gmail.com
                         </a>
                         </p>
