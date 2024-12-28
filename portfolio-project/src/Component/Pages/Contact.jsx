@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../Layer/Container'
 import TitleHeader from '../Layer/TitleHeader'
 import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
@@ -6,10 +6,33 @@ import { MdEmail, MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("Message sent!");
-      };
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzDEXRIytPiXQ7JcBzf40geoaqEOiLJUKZQDQG00Ntc-5CzYPW14mQg2XL6CZHz_g2Q/exec", 
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    );
+
+    const result = await response.json();
+    if (result.status === "success") {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert("Failed to send the message. Please try again.");
+    }
+  };
+
+
   return (
     <div id='contact' className='bg-[#343a40] py-[72px]'>
         <Container>
@@ -75,26 +98,33 @@ const Contact = () => {
 
                 </div>
 
-                <div onSubmit={handleSubmit} className='form  md:w-[988px]'>
+                <form onSubmit={handleSubmit} className='form  md:w-[988px]'>
                 <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4'>
                             send me a note
                         </h2>
 
                  <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
-                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="text" placeholder='Name' />
+                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="text" placeholder='Name' name='name'  value={formData.name}
+        onChange={handleChange}
+        required/>
 
-                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email" placeholder='Email' />
+                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email" placeholder='Email' name='email'   value={formData.email}
+        onChange={handleChange}
+        required/>
                     </div> 
                     
-                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  placeholder='Tell us more about your needs........'></textarea>  
+                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  name="message"
+        value={formData.message}
+        onChange={handleChange}
+        required  placeholder='Tell us more about your needs........'></textarea>  
 
                     
                     <div className='text-center'>
-                    <button className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
+                    <button type='submit' className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
                         Send Message
                     </button> 
                         </div>   
-                </div>
+                </form>
 
                 <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
                    
