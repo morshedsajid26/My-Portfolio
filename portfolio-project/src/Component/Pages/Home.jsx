@@ -13,7 +13,7 @@ const Home = () => {
   return ( 
     <div 
       id='home' 
-      className='py-[205px] md:py-[220px]  sm:pt-[200px] bg-[url(/public/sajid.jpg)] text-center relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:h-full after:w-full after:top-0 after:left-0 after:bg-black/35 z-0 after:-z-30' 
+      className='py-[205px] md:py-[220px]  sm:pt-[200px] bg-[url(/public/sajid.jpg)] text-center relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:h-full after:w-full after:top-0 after:left-0 after:bg-black/45 z-0 after:-z-30' 
       onClick={() => handleClick(false)}
     >
       <Container className=' '>
