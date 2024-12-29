@@ -136,19 +136,19 @@ const Portfolio = () => {
           <Slider {...settings} className="">
             <SliderCard
               image={orebi}
-              techs={["HTML5", "Tailwind CSS", "Javascript", "React"]}
+              techs={["HTML5", "Tailwind CSS", "JavaScript", "React"]}
               name={"OREBI"}
               link={""}
             />
             <SliderCard
               image={furnishop}
-              techs={["HTML5", "Tailwind CSS", "Javascript", "React"]}
+              techs={["HTML5", "Tailwind CSS", "JavaScript", "React"]}
               name={"FurniShop"}
               link={"https://furni-shop-snms.vercel.app"}
             />
             <SliderCard
               image={agenc}
-              techs={["HTML5", "Bootstrap", "jquery", "Javascript"]}
+              techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
               name={"Agenc"}
               link={"https://agenc-snms.vercel.app/"}
             />
