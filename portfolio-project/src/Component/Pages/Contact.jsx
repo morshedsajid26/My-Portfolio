@@ -104,19 +104,30 @@ const Contact = () => {
                         </h2>
 
                  <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
-                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="text" placeholder='Name' name='name'  value={formData.name}
-        onChange={handleChange}
-        required/>
+                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' 
+                    type="text" 
+                    placeholder='Name' 
+                    name='name'  
+                    value={formData.name}
+                    onChange={handleChange}
+                    required/>
 
-                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email" placeholder='Email' name='email'   value={formData.email}
-        onChange={handleChange}
-        required/>
+                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email"
+                    placeholder='Email'
+                    name='email'
+                    value={formData.email}
+                    onChange={handleChange}
+                    required/>
+
                     </div> 
                     
-                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required  placeholder='Tell me more about your needs........'></textarea>  
+                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  
+                    placeholder='Tell me more about your needs........'
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required>
+                    </textarea>  
 
                     
                     <div className='text-center'>
