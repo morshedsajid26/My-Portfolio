@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Li from './Layer/Li';
 
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
@@ -6,12 +6,30 @@ import { FaFacebookF, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icon
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 bg-[#111111] fixed w-full z-30">
+    <nav className={`flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4  fixed w-full z-30  ${
+        isScrolled ? "bg-[#111111] transition-all duration-1000" : "bg-transparent"
+      }`}>
       {/* Logo Section */}
       <div className="logo z-30 ">
         <h1 className="font-pop text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
-          <a href="#services">Portfolio</a>
+          <a href="#">Portfolio</a>
         </h1>
       </div>
 
@@ -19,7 +37,7 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[35px] top-full left-0 h-[50%] md:h-full w-full md:w-auto py-[170px] md:py-0  bg-[#111111f4] z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
+        className={`menu absolute md:static gap-x-[35px] top-full left-0 h-[50%] md:h-full w-full md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
           isMenuOpen ? 'translate-y-0 ' : '-translate-y-[200%]  md:translate-y-0'
         } `}
       >
