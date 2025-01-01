@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Li from './Layer/Li';
+import Li from '../Layer/Li';
 
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
 

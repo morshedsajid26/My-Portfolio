@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './Layer/Container';
+import Container from '../Layer/Container';
 
 const Footer = () => {
   // Get the current year dynamically

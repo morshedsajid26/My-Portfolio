@@ -1,13 +1,14 @@
 import React from 'react'
-import Container from '../Layer/Container'
-import TitleHeader from '../Layer/TitleHeader'
-import ServicePart from '../Layer/ServicePart'
+
 
 import { RiComputerLine } from "react-icons/ri";
 import { HiLink, HiOutlineRocketLaunch } from 'react-icons/hi2';
 import { PiPaletteBold } from 'react-icons/pi';
 import { FaMobileAlt } from 'react-icons/fa';
 import { IoBugOutline } from 'react-icons/io5';
+import Container from '../Layer/Container';
+import TitleHeader from '../Layer/TitleHeader';
+import ServicePart from '../Layer/ServicePart';
 
 
 

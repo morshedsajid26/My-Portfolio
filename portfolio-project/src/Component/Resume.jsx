@@ -2,8 +2,8 @@ import React from 'react';
 import Container from '../Layer/Container';
 import TitleHeader from '../Layer/TitleHeader';
 import ResumeCard from '../Layer/ResumeCard';
-import Skills from '../Skills';
 import { FaDownload } from 'react-icons/fa';
+import Skills from './Skills';
 
 const Resume = () => {
   return (

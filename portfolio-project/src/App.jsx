@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from './Component/Navbar'
-import About from './Component/Pages/About'
-import Services from './Component/Pages/Services'
-import Resume from './Component/Pages/Resume'
-import Portfolio from './Component/Pages/Portfolio'
-import Client from './Component/Pages/Client'
-import Contact from './Component/Pages/Contact'
+import About from './Component/About'
+import Services from './Component/Services'
+import Resume from './Component/Resume'
+import Portfolio from './Component/Portfolio'
+import Client from './Component/Client'
+import Contact from './Component/Contact'
 import Footer from './Component/Footer'
 
 import whatsapp from '/whatsapp.png'
-import Home from './Component/Pages/Home'
+import Home from './Component/Home'
 
 const App = () => {
   return (

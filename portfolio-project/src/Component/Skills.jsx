@@ -1,5 +1,5 @@
 import React from 'react'
-import SkillCard from './Layer/SkillCard'
+import SkillCard from '../Layer/SkillCard'
 
 const Skills = ({className}) => {
   return (
