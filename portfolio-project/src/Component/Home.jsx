@@ -4,10 +4,13 @@ import { FaChevronDown } from 'react-icons/fa';
 import Container from '../Layer/Container';
 
 const Home = () => {
-  const [color, setColor] = useState("transparent"); // Initial color
+  const [color, setColor] = useState("transparent"); 
+
+  const [border, setBorder] = useState("#20c997"); 
 
   const handleClick = (isButton) => {
     setColor(isButton ? "#0d6efd" : "transparent");
+    setBorder(isButton ? "#0d6efd" : "#20c997");
   };
 
   return ( 
@@ -40,6 +43,7 @@ const Home = () => {
             style={{
               backgroundColor: color,
               color: "white",
+              borderColor: border,
             }}
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#20c997")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = color)}
