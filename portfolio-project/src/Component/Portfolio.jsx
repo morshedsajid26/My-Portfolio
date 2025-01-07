@@ -4,6 +4,8 @@ import TitleHeader from "../Layer/TitleHeader";
 import orebi from "/Orebi.png";
 import furnishop from "/Furnishop.png";
 import agenc from "/Agenc.png";
+import gericht from "/Gericht.png"
+
 import Slider from "react-slick";
 import { FiExternalLink } from "react-icons/fi";
 import "slick-carousel/slick/slick.css";
@@ -149,6 +151,14 @@ const Portfolio = () => {
             <SliderCard
               image={agenc}
               techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
+              name={"Agenc"}
+              link={""}
+            />
+
+
+            <SliderCard
+              image={gericht}
+              techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
               name={"Agenc"}
               link={"https://agenc-snms.vercel.app/"}
             />
