@@ -151,7 +151,7 @@ const Portfolio = () => {
             <SliderCard
               image={agenc}
               techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
-              name={"Agenc"}
+              name={"GERICHT"}
               link={""}
             />
 
