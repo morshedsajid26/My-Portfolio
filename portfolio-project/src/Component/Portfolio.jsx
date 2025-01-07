@@ -151,16 +151,16 @@ const Portfolio = () => {
             <SliderCard
               image={agenc}
               techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
-              name={"GERICHT"}
-              link={""}
+              name={"Agenc"}
+              link={"https://agenc-snms.vercel.app/"}
             />
 
 
             <SliderCard
               image={gericht}
               techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
-              name={"Agenc"}
-              link={"https://agenc-snms.vercel.app/"}
+              name={"GERICHT"}
+              link={""}
             />
 
             {/* <div className={` relative   font-pop`}>
