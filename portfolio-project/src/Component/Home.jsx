@@ -32,7 +32,7 @@ const Home = () => {
         <p className='text-[18px] sm:text-[21px] md:text-[24px] text-white font-pop mb-6 mt-4'>
           based in Dhaka, Bangladesh.
         </p>
-sssssssss
+
         {/* Hire Me Button */}
         <a href="#contact">
           <button
