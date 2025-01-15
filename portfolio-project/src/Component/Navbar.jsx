@@ -46,7 +46,7 @@ const Navbar = () => {
         <Li liText="Services" href="#services" />
         <Li liText="Resume" href="#resume" />
         <Li liText="Portfolio" href="#portfolio" />
-        <Li liText="Client" href="#client" />
+        {/* <Li liText="Client" href="#client" /> */}
         <Li liText="Contact" href="#contact" />
       </div>
 
