@@ -9,13 +9,14 @@ const About = () => {
         <TitleHeader Heading="About me" Ptext="Know me more" />
 
         {/* About Me Section */}
-        <div className="aboutMe w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6">
+        <div className="aboutMe w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6 mx-auto">
           {/* Text Section */}
-          <div className="text w-full lg:w-[60%] text-center md:text-left">
+          <div className="text w-full lg:w-full text-center ">
             <h2 className="font-pop text-[22px] md:text-[28px] font-semibold text-[#ffffff]">
-              I'm 
-              <span className="text-[#20c997]"> Syed Neaz Morshed Sajid, </span>
-              a Frontend Web Developer
+              I'm a 
+              <span className="text-[#20c997]"> Frontend Web Developer </span>
+              
+               
             </h2>
             <p className="font-pop text-[14px] md:text-[16px] mb-[18px] mt-[16px] text-[#ffffff]/50">
             I can help you with crafting clean, functional, and visually appealing user interfaces for your projects. Whether you need assistance building a responsive website, creating interactive components, or optimizing your application for better performance, I’m here to support you. I can also collaborate on projects, provide feedback on design and usability, and help solve frontend development challenges with creative solutions.
@@ -26,7 +27,7 @@ const About = () => {
           </div>
 
           {/* Details Section */}
-          <div className="details w-full lg:w-[35%]">
+          {/* <div className="details w-full lg:w-[35%]">
             <ul className="font-pop text-[14px] md:text-[16px] text-[#dee3e4] font-bold mb-4">
               <li className="border-b border-[#ffffff]/20 py-3">
                 Name: <span className="font-normal">Syed Neaz Morshed Sajid</span>
@@ -49,7 +50,7 @@ const About = () => {
               Download CV
               </a>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Experience Section */}
