@@ -20,7 +20,7 @@ const App = () => {
         <Services/>
         <Resume/>
         <Portfolio/>
-        <Client/>
+        {/* <Client/> */}
         <Contact/>
         <Footer/>
         <div className='fixed bottom-5 right-5 h-12 w-12  animate-bounce   '>

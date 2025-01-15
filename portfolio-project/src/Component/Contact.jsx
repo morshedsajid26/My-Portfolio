@@ -34,7 +34,7 @@ const Contact = () => {
 
 
   return (
-    <div id='contact' className='bg-[#343a40] py-[72px]'>
+    <div id='contact' className='bg-[#212529] py-[72px]'>
         <Container>
             <TitleHeader Heading='Contact' Ptext='Get in Touch'/>
 
