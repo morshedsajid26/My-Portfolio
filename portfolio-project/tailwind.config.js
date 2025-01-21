@@ -7,7 +7,8 @@ export default {
   theme: {
 
     fontFamily:{
-      'pop': ["Poppins", "sans-serif"]
+      'pop': ["Poppins", "sans-serif"],
+      'acme': ["Acme", 'sans-serif']
     },
     extend: {
       animation: {
