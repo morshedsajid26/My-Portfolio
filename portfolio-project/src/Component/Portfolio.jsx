@@ -6,6 +6,8 @@ import furnishop from "/Furnishop.png";
 import agenc from "/Agenc.png";
 import gericht from "/Gericht.png"
 
+import UNIAO from '/UNIAO.png'
+
 import Slider from "react-slick";
 import { FiExternalLink } from "react-icons/fi";
 import "slick-carousel/slick/slick.css";
@@ -161,6 +163,13 @@ const Portfolio = () => {
               techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
               name={"GERICHT"}
               link={""}
+            />
+
+              <SliderCard
+              image={UNIAO}
+              techs={["HTML5", "Tailwind", "JavaScript", "React"]}
+              name={"UNIAO"}
+              link={"https://uniao-one.vercel.app/"}
             />
 
             {/* <div className={` relative   font-pop`}>
