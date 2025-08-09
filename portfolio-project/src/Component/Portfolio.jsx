@@ -144,12 +144,27 @@ const Portfolio = () => {
               name={"OREBI"}
               link={""}
             />
+
+            
+              <SliderCard
+                image={gericht}
+                techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
+                name={"GERICHT"}
+                link={"https://gericht-food-restaurant.vercel.app/"}
+              />
+
+
             <SliderCard
               image={furnishop}
               techs={["HTML5", "Tailwind CSS", "JavaScript", "React"]}
               name={"FurniShop"}
               link={"https://furni-shop-snms.vercel.app"}
             />
+
+            
+
+
+
             <SliderCard
               image={agenc}
               techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
@@ -158,12 +173,6 @@ const Portfolio = () => {
             />
 
 
-            <SliderCard
-              image={gericht}
-              techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
-              name={"GERICHT"}
-              link={"https://gericht-food-restaurant.vercel.app/"}
-            />
 
               <SliderCard
               image={UNIAO}
