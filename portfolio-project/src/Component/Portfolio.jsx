@@ -162,7 +162,7 @@ const Portfolio = () => {
               image={gericht}
               techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
               name={"GERICHT"}
-              link={""}
+              link={"https://gericht-food-restaurant.vercel.app/"}
             />
 
               <SliderCard
