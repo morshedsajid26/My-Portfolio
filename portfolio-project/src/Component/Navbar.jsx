@@ -37,7 +37,7 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[35px] top-full right-0  h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
+        className={`menu absolute md:static gap-x-[35px] top-0 right-0  h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent -z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
           isMenuOpen ? 'translate-x-0 ' : 'translate-x-[100%]  md:translate-x-0'
         } `}
       >
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {/* Hamburger Icon */}
       <div className="md:hidden mt-[4px] mr-4">
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+        <button  onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
           {isMenuOpen ? <FaTimes size={24} color="#FAFAFA" /> : <FaBars size={24} color="#FAFAFA" />}
         </button>
       </div>
