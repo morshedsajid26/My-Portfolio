@@ -37,8 +37,8 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[35px] top-full left-0 h-[50%] md:h-full w-full md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
-          isMenuOpen ? 'translate-y-0 ' : '-translate-y-[200%]  md:translate-y-0'
+        className={`menu absolute md:static gap-x-[35px] top-full right-0  md:h-full w-[50%] md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
+          isMenuOpen ? 'translate-x-0 ' : 'translate-x-[100%]  md:translate-x-0'
         } `}
       >
         <Li liText="Home" href="#home" />
@@ -46,8 +46,26 @@ const Navbar = () => {
         <Li liText="Services" href="#services" />
         <Li liText="Resume" href="#resume" />
         <Li liText="Portfolio" href="#portfolio" />
-        {/* <Li liText="Client" href="#client" /> */}
         <Li liText="Contact" href="#contact" />
+
+
+        <ul className=" justify-end gap-4 text-[#FAFAFA] md:hidden flex">
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="https://github.com/morshedsajid26" aria-label="GitHub">
+              <FaGithub />
+            </a>
+          </li>
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="https://www.facebook.com/snmsajid26" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+          </li>
+          <li className="w-[26px] h-[26px] flex items-center justify-center">
+            <a href="https://www.linkedin.com/in/neaz-morshed-sajid/" aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Icon Section */}
@@ -61,7 +79,7 @@ const Navbar = () => {
       </div>
 
 
-        <ul className="flex justify-end gap-4 text-[#FAFAFA]">
+        <ul className=" justify-end gap-4 text-[#FAFAFA] hidden md:flex">
           <li className="w-[26px] h-[26px] flex items-center justify-center">
             <a href="https://github.com/morshedsajid26" aria-label="GitHub">
               <FaGithub />
