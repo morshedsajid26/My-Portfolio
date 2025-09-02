@@ -47,10 +47,10 @@ function SamplePrevArrow(props) {
 
 let SliderCard = ({ image, name, techs, link }) => {
   return (
-    <div className={` relative aspect-[624/330]  md:aspect-[624/350] rounded-t-[10px]   font-pop mx-1.5 md:mx-3`}>
-      <img className="h-full w-full rounded-t-[10px]  " src={image} alt={image} />
+    <div className={` relative aspect-[624/330]  md:aspect-[624/350] rounded-[10px]   font-pop mx-1.5 md:mx-3`}>
+      <img className="h-full w-full rounded-[10px]  " src={image} alt={image} />
 
-      <div className=" h-full w-full absolut top-0  bg-black/65 flex flex-col rounded-b-[10px] opacity- hover:opacity-100 transition-all duration-500 justify-between pb-3">
+      <div className=" h-full w-full absolute top-0  bg-black/65 flex flex-col rounded-[10px] opacity-0 hover:opacity-100 transition-all duration-500 justify-between pb-3">
         <h3 className="text-[25px] md:text-[40px] text-white/70 text-center">
           {name}
         </h3>
