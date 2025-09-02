@@ -49,7 +49,7 @@ const Navbar = () => {
         <Li liText="Contact" href="#contact" />
 
 
-        <ul className=" justify-end gap-4 text-[#FAFAFA] md:hidden flex">
+        <ul className="mt-4 justify-end  gap-4 text-[#FAFAFA] md:hidden flex">
           <li className="w-[26px] h-[26px] flex items-center justify-center">
             <a href="https://github.com/morshedsajid26" aria-label="GitHub">
               <FaGithub />
