@@ -134,7 +134,7 @@ const Portfolio = () => {
   return (
     <div id="portfolio" className="bg-[#343a40] pt-[72px] pb-[100px]">
       <Container>
-        <TitleHeader Heading="portfolio" Ptext="my work" />
+        <TitleHeader Heading="portfolio" Ptext="My work" />
 
         <div className="">
           <Slider {...settings} className="">
