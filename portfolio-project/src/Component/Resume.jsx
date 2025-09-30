@@ -28,7 +28,7 @@ const Resume = () => {
             />
 
             <ResumeCard
-              year="2023-2024"
+              year="2024"
               department="Frontend Development with React"
               institute="Creative IT Institute"
               details="Learned HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React, Next.js, and building responsive, dynamic web applications."
@@ -42,21 +42,16 @@ const Resume = () => {
             </h2>
 
 
-            <p className='font-pop text-white text-center text-[20px] md:text-[24px]  font-medium'> No job experience. </p>
-{/* 
-            <ResumeCard
-              year="2023-2026"
-              department="Junior Frontend Developer"
-              institute="Tech Solutions Ltd."
-              details="Developed responsive web applications using React.js. "
-            />
+          
 
             <ResumeCard
-              year="2023-2026"
-              department="Freelance Web Developer"
-              institute="Upwork & Fiverr"
-              details="Worked with multiple clients to build and maintain websites. "
-            /> */}
+              year="2025-Now"
+              department="Frontend Developer"
+              institute="Fire AI - Betopia Group"
+              details="Developing and maintaining user interfaces, ensuring responsive design, and optimizing performance for web applications."
+            />
+
+           
           </div>
         </div>
 
