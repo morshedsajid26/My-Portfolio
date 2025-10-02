@@ -34,9 +34,9 @@ const Contact = () => {
 
 
   return (
-    <div id='contact' className='bg-[#212529] py-[72px]'>
+    <div id='contact' className='bg-[#212529] py-[72px] min-h-screen flex items-center'>
         <Container>
-            <TitleHeader Heading='Contact' Ptext='Get in Touch'/>
+            <TitleHeader className='md:mb-20 mb-10'  Heading='Contact' Ptext='Get in Touch'/>
 
             <div className='md:flex font-pop '>
                 <div className='text md:w-[328px] hidden md:block'>

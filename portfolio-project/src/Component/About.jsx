@@ -4,9 +4,9 @@ import TitleHeader from '../Layer/TitleHeader';
 
 const About = () => {
   return (
-    <div id='about' className="bg-[#212529] py-[72px]">
+    <div id='about' className="bg-[#212529] py-[72px] h-screen flex items-center">
       <Container>
-        <TitleHeader Heading="About me" Ptext="Know me more" />
+        <TitleHeader  Heading="About me" Ptext="Know me more" />
 
         {/* About Me Section */}
         <div className="aboutMe w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6 mx-auto">
@@ -14,7 +14,7 @@ const About = () => {
           <div className="text w-full lg:w-full text-center ">
             <h2 className="font-pop text-[22px] md:text-[28px] font-semibold text-[#ffffff]">
               I'm a 
-              <span className="text-[#20c997]"> Frontend Web Developer </span>
+              <span className="text-[#20c997]"> Frontend Developer </span>
               
                
             </h2>

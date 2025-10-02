@@ -7,7 +7,7 @@ import Skills from './Skills';
 
 const Resume = () => {
   return (
-    <div id='resume' className="bg-[#212529] py-12 font-pop">
+    <div id='resume' className="bg-[#212529] py-12 font-pop min-h-screen flex items-center">
       <Container>
         {/* Title Header */}
         <TitleHeader Heading="Summary" Ptext="Resume" />

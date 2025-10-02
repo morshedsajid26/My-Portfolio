@@ -15,9 +15,9 @@ import ServicePart from '../Layer/ServicePart';
 
 const Services = () => {
   return (
-    <div id='services' className='bg-[#343a40] py-[72px]'>
+    <div id='services' className='bg-[#343a40] py-[72px]  min-h-screen flex items-center'>
         <Container>
-        <TitleHeader Heading='services' Ptext='what i do?'/>
+        <TitleHeader className='md:mb-20 mb-10 '  Heading='services' Ptext='what i do?'/>
 
 
         <div className='w-full grid md:grid-cols-2 gap-12  '>
