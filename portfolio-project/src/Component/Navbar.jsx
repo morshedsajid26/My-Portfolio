@@ -29,7 +29,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="logo z-30 ">
         <h1 className="font-acme text-[24px] sm:text-[28px] lg:text-[30px] text-[#FAFAFA]">
-          <a href="#"> MORSHED</a>
+          <a href="#"> {`<MORSHED/>`}</a>
         </h1>
       </div>
 
