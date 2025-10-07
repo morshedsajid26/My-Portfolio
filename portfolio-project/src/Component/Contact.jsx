@@ -44,7 +44,7 @@ const Contact = () => {
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4 '>Address</h2>
                     <p className='text-[#dee3e4] text-[16px] w-[190px]'>
-                        House 42, Avenue 1, Block E, Mirpur 12, Dhaka 1216, Bangladesh
+                        House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
@@ -104,7 +104,7 @@ const Contact = () => {
                         </h2>
 
                  <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
-                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' 
+                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px]  text-white' 
                     type="text" 
                     placeholder='Name' 
                     name='name'  
@@ -112,7 +112,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required/>
 
-                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white' type="email"
+                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px]  text-white' type="email"
                     placeholder='Email'
                     name='email'
                     value={formData.email}
@@ -121,7 +121,7 @@ const Contact = () => {
 
                     </div> 
                     
-                    <textarea className='w-full   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] rounded-[6px] text-[16px] text-white my-6'  
+                    <textarea className='w-full resize-none   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31]  rounded-[6px] text-[16px] text-white my-6'  
                     placeholder='Tell me more about your needs........'
                     name="message"
                     value={formData.message}
