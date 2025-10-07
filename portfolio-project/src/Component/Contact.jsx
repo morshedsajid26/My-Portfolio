@@ -142,7 +142,7 @@ const Contact = () => {
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4 '>Address</h2>
                     <p className='text-[#dee3e4] text-[16px] w-[190px]'>
-                        House 42, Avenue 1, Block E, Mirpur 12, Dhaka 1216, Bangladesh
+                         House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
