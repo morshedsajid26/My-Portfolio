@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className={`flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4  fixed w-full z-30  ${
-        isScrolled ? "bg-[#111111] transition-all duration-1000" : "bg-transparent"
+        isScrolled ? "bg-[#111111]/80 transition-all duration-1000" : "bg-transparent"
       }`}>
       {/* Logo Section */}
       <div className="logo z-30 ">
@@ -37,7 +37,7 @@ const Navbar = () => {
 
       {/* Menu Section */}
       <div
-        className={`menu absolute md:static gap-x-[35px] top-0 right-0  h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0  bg-[#111111f4] md:bg-transparent -z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
+        className={`menu absolute md:static gap-x-[35px] top-0 right-0  h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0  bg-[#111111]/80 md:bg-transparent -z-10 flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-300 overflow-y-auto md:overflow-visible ${
           isMenuOpen ? 'translate-x-0 ' : 'translate-x-[100%]  md:translate-x-0'
         } `}
       >
