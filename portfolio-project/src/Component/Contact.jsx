@@ -3,6 +3,7 @@ import Container from '../Layer/Container'
 import TitleHeader from '../Layer/TitleHeader'
 import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Contact = () => {
 
@@ -131,9 +132,12 @@ const Contact = () => {
 
                     
                     <div className='text-center'>
-                    <button type='submit' className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
+                    <motion.button 
+                         whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+                    type='submit' className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
                         Send Message
-                    </button> 
+                    </motion.button> 
                         </div>   
                 </form>
 

@@ -13,7 +13,7 @@ import Home from './Component/Home'
 
 const App = () => {
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative overflow-hidden   scrollbar-thin scrollbar-thumb-[#20c997] scrollbar-track-[#20c997]'>
       <Navbar/>
       <Home/>
         <About/>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TextAnimation from '../Layer/TextAnimation';
 import { FaChevronDown } from 'react-icons/fa';
 import Container from '../Layer/Container';
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [color, setColor] = useState("transparent"); 
@@ -34,8 +35,12 @@ const Home = () => {
         </p>
 
         {/* Hire Me Button */}
-        <a href="#contact">
-          <button
+        <a 
+   
+        href="#contact">
+          <motion.button
+               whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
             onClick={(e) => {
               e.stopPropagation(); // Prevent parent click from firing
               handleClick(true); // Change to color when button is clicked
@@ -50,7 +55,7 @@ const Home = () => {
             className='py-3 px-8 sm:px-10 border-[1.6px] border-[#20c997] hover:bg-[#20c997]/85 transition-all duration-500 rounded-full font-pop hover:text-[#ffffff] text-[#20c997] text-[14px] sm:text-[16px] font-medium'
           >
             Hire Me
-          </button>
+          </motion.button>
         </a>
       </Container>
 
