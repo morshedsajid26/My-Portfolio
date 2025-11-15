@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
 
 
-        <ul className=" justify-end gap-4 text-[#FAFAFA] hidden md:flex">
+        <ul className=" justify-end gap-4 text-[#FAFAFA] ml-5 hidden md:flex">
           <li className="w-[26px] h-[26px] flex items-center justify-center">
             <a href="https://github.com/morshedsajid26" aria-label="GitHub">
               <FaGithub />
