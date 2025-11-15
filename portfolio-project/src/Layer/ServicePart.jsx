@@ -7,7 +7,7 @@ const ServicePart = ({ Heading, pText, icon, className }) => {
     >
       {/* Icon Section */}
       <div
-        className="icon w-[70px]  h-[70px] text-[#20c997] bg-[#212529] flex items-center justify-center rounded"
+        className="icon w-[70px]  h-[70px] text-[#20c997] bg-[#212529] dark:bg-white dark:shadow-md flex items-center justify-center rounded"
         aria-hidden="true"
       >
         {icon}
@@ -15,10 +15,10 @@ const ServicePart = ({ Heading, pText, icon, className }) => {
 
       {/* Text Section */}
       <div className="text font-pop w-full">
-        <h2 className="text-[#ffffff] text-[18px] sm:text-[20px] font-medium mb-2">
+        <h2 className="text-[#ffffff] dark:text-[#252b33] text-[18px] sm:text-[20px] font-medium mb-2">
           {Heading}
         </h2>
-        <p className="text-[14px] sm:text-[16px] text-[#ffffff]/50 leading-relaxed">
+        <p className="text-[14px] sm:text-[16px] text-[#ffffff]/50 dark:text-[#4c4d4d] leading-relaxed">
           {pText}
         </p>
       </div>

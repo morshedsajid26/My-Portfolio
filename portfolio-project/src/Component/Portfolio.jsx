@@ -19,12 +19,12 @@ function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
     <div
-      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-1/2 translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-[#FFFFFF] shadow  hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  "
+      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-1/2 translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-[#FFFFFF] dark:bg-[#212529] shadow  hover:bg-[#20c997] dark:hover:bg-[#20c997]  transition-all duration-500 cursor-pointer  z-10  "
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
       <div className="w-full h-full flex items-center justify-center transition-all duration-500">
-        <FaArrowRight />
+        <FaArrowRight className="dark:text-white " />
       </div>
     </div>
   );
@@ -34,12 +34,12 @@ function SamplePrevArrow(props) {
   const { style, onClick } = props;
   return (
     <div
-      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/2 -translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-[#FFFFFF] shadow hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  "
+      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px]  left-1/2 -translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-[#FFFFFF] dark:bg-[#212529] shadow hover:bg-[#20c997] dark:hover:bg-[#20c997]  transition-all duration-500 cursor-pointer z-10  "
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
       <div className="w-full h-full flex items-center justify-center transition-all duration-500">
-        <FaArrowLeft />
+        <FaArrowLeft className="dark:text-white  " />
       </div>
     </div>
   );
@@ -132,7 +132,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div id="portfolio" className="bg-[#343a40] md:pt-[72px] pt-[200px] md:pb-[100px] pb-[250px] md:min-h-screen md:flex md:items-center">
+    <div id="portfolio" className="bg-[#343a40] dark:bg-[#f8f9fa] md:pt-[72px] pt-[200px] md:pb-[100px] pb-[250px] md:min-h-screen md:flex md:items-center">
       <Container>
         <TitleHeader className='mb-20' Heading="portfolio" Ptext="My work" />
 

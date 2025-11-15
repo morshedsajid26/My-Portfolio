@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
-    <div id='resume' className="bg-[#212529] py-12 font-pop min-h-screen flex items-center">
+    <div id='resume' className="bg-[#212529] dark:bg-white py-12 font-pop min-h-screen flex items-center">
       <Container>
         {/* Title Header */}
         <TitleHeader Heading="Summary" Ptext="Resume" />
@@ -18,7 +18,7 @@ const Resume = () => {
         <div className="resume w-full  grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
           {/* Education */}
           <div className="education flex flex-col gap-6">
-            <h2 className="text-white text-[24px] font-semibold">
+            <h2 className="text-white dark:text-[#252b33] text-[24px] font-semibold">
               My Education
             </h2>
 
@@ -39,7 +39,7 @@ const Resume = () => {
 
           {/* Experience */}
           <div className="experience flex flex-col gap-6">
-            <h2 className="text-white text-[24px] font-semibold">
+            <h2 className="text-white dark:text-[#252b33] text-[24px] font-semibold">
               My Experience
             </h2>
 

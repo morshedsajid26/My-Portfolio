@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Li from '../Layer/Li';
 
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
+import ThemeToggle from './ThemeToogle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +71,7 @@ const Navbar = () => {
 
       {/* Icon Section */}
       <div className="icon flex items-center justify-center">
-
+<ThemeToggle/>
         {/* Hamburger Icon */}
       <div className="md:hidden mt-[4px] mr-4">
         <button  onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
