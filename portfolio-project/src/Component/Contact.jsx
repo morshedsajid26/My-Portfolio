@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Container from '../Layer/Container'
 import TitleHeader from '../Layer/TitleHeader'
 import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
-import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -35,7 +35,7 @@ const Contact = () => {
 
 
   return (
-    <div id='contact' className='bg-[#212529] dark:bg-white py-[72px] min-h-screen flex items-center'>
+    <div id='contact' className='bg-white dark:bg-[#212529] py-[72px] min-h-screen flex items-center'>
         <Container>
             <TitleHeader className='md:mb-20 mb-10'  Heading='Contact' Ptext='Get in Touch'/>
 
@@ -43,22 +43,22 @@ const Contact = () => {
                 <div className='text md:w-[328px] hidden md:block'>
                    
                    <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#ffffff] font-medium mb-4 dark:text-[#252b33]'>Address</h2>
-                    <p className='text-[#dee3e4] text-[16px] w-[190px] dark:text-[#4c4d4d]'>
+                   <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>Address</h2>
+                    <p className='text-[#4c4d4d] dark:text-[#dee3e4] text-[16px] w-[190px]'>
                         House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
                     <div className=' my-4'>
                         
-                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] dark:text-[#4c4d4d] text-[16px]'>   
+                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>   
                         <span className='text-[#20c997] text-[18px]'>  
                             <FaPhone />
                             </span>
                          +880 1756899699
                         </p>
 
-                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] dark:text-[#4c4d4d] text-[16px]'>                      
+                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>                      
                         <span className='text-[#20c997] text-[18px]' > 
                             <MdEmail />
                             </span>
@@ -69,11 +69,11 @@ const Contact = () => {
                     </div>
 
                     <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#ffffff] dark:text-[#252b33] font-medium mb-4'>
+                        <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
                             follow me
                         </h2>
 
-                        <ul className='flex text-[#dddddd] dark:text-[#4c4d4d] gap-2.5' >
+                        <ul className='flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5' >
                         <li className="w-[26px] h-[26px] flex items-center justify-center">
                                        <a href="https://github.com/morshedsajid26" aria-label="GitHub">
                                          <FaGithub />
@@ -100,12 +100,12 @@ const Contact = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} className='form  md:w-[988px]'>
-                <h2 className='uppercase text-[21px] text-[#ffffff] dark:text-[#252b33] font-medium mb-4'>
+                <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
                             send me a note
                         </h2>
 
                  <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
-                    <input className='md:w-[471px] py-[13px] px-[15px]    outline-[#20c997] bg-[#232a31] dark:bg-transparent dark:border rounded-[6px] text-[16px]  text-white' 
+                    <input className='md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white' 
                     type="text" 
                     placeholder='Name' 
                     name='name'  
@@ -113,7 +113,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required/>
 
-                    <input className='md:w-[471px] py-[13px] px-[15px]  outline-[#20c997] bg-[#232a31] dark:bg-transparent dark:border rounded-[6px] text-[16px]  text-white' type="email"
+                    <input className='md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white' type="email"
                     placeholder='Email'
                     name='email'
                     value={formData.email}
@@ -122,7 +122,7 @@ const Contact = () => {
 
                     </div> 
                     
-                    <textarea className='w-full resize-none   h-20 py-[13px] px-[15px] outline-[#20c997] bg-[#232a31] dark:bg-transparent dark:border  rounded-[6px] text-[16px] text-white my-6'  
+                    <textarea className='w-full resize-none h-20 py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0  rounded-[6px] text-[16px] text-[#252b33] dark:text-white my-6'  
                     placeholder='Tell me more about your needs........'
                     name="message"
                     value={formData.message}
@@ -134,7 +134,7 @@ const Contact = () => {
                     <div className='text-center'>
                     <motion.button 
                          whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.95 }}
+                         whileTap={{ scale: 0.95 }}
                     type='submit' className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
                         Send Message
                     </motion.button> 
@@ -144,22 +144,22 @@ const Contact = () => {
                 <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
                    
                    <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#ffffff] dark:text-[#252b33] font-medium mb-4 '>Address</h2>
-                    <p className='text-[#dee3e4] dark:text-[#4c4d4d]  text-[16px] w-[190px]'>
+                   <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4 '>Address</h2>
+                    <p className='text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px] w-[190px]'>
                          House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
                     <div className=' my-4'>
                         
-                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] dark:text-[#4c4d4d]  text-[16px]'>   
+                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px]'>   
                         <span className='text-[#20c997] text-[18px]'>  
                             <FaPhone />
                             </span>
                          +880 1756899699
                         </p>
 
-                        <p className='flex items-center gap-2 font-pop text-[#dee3e4] dark:text-[#4c4d4d] text-[16px]'>                      
+                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>                      
                         <span className='text-[#20c997] text-[18px]' > 
                             <MdEmail />
                             </span>
@@ -170,11 +170,11 @@ const Contact = () => {
                     </div>
 
                     <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#ffffff] dark:text-[#252b33] font-medium mb-4'>
+                        <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
                             follow me
                         </h2>
 
-                        <ul className='flex text-[#dddddd] dark:text-[#4c4d4d] gap-2.5' >
+                        <ul className='flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5' >
                            <li className="w-[26px] h-[26px] flex items-center justify-center">
                                        <a href="https://github.com/morshedsajid26" aria-label="GitHub">
                                          <FaGithub />
@@ -196,8 +196,6 @@ const Contact = () => {
                             
                         </ul>
                     </div>
-
-
 
                 </div>
             </div>

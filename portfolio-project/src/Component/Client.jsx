@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import {  FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 
 
+
 // function SampleNextArrow(props) {
 //   const {  style, onClick } = props;
 //   return (
@@ -41,9 +42,6 @@ import {  FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 
 
 
-
-
-
 const Client = () => {
 
 //   const settings = {
@@ -61,9 +59,8 @@ const Client = () => {
 //   };
 
 
-
   return (
-    <div id='client' className='bg-[#212529] py-[72px]'>
+    <div id='client' className='bg-white dark:bg-[#212529] py-[72px]'>
          <Container>
         <TitleHeader Heading='testimonial' Ptext='client speak'/>
 
@@ -73,27 +70,23 @@ const Client = () => {
 
 <Slider {...settings}>
 
-
-
-
-
-    <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
+    <div className='max-w-[550px]  bg-white dark:bg-[#111418] p-[48px] '>
         <div className='top flex items-center gap-4'>
             
                 <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
 
             <div>
-                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
+                <p className='text-[16px] font-semibold font-pop text-[#252b33] dark:text-white '>
                 Sajid
                 </p>
-                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
+                <p className='text-[16px] font-medium font-pop text-[#4c4d4d] dark:text-white/50'>
                     User from Usa
                 </p>
             </div>
 
          </div>
 
-         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
+         <p className='text-[16px] font-normal font-pop text-[#4c4d4d] dark:text-[#dee3e4] my-6 '>
          “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
             </p>
 
@@ -108,24 +101,23 @@ const Client = () => {
     </div>
 
 
-
-    <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
+    <div className='max-w-[550px]  bg-white dark:bg-[#111418] p-[48px] '>
         <div className='top flex items-center gap-4'>
             
                 <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
 
             <div>
-                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
+                <p className='text-[16px] font-semibold font-pop text-[#252b33] dark:text-white '>
                 Sajid
                 </p>
-                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
+                <p className='text-[16px] font-medium font-pop text-[#4c4d4d] dark:text-white/50'>
                     User from Usa
                 </p>
             </div>
 
          </div>
 
-         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
+         <p className='text-[16px] font-normal font-pop text-[#4c4d4d] dark:text-[#dee3e4] my-6 '>
          “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
             </p>
 
@@ -140,25 +132,23 @@ const Client = () => {
     </div>
 
 
-
-
-    <div className='max-w-[550px]  bg-[#111418] p-[48px] '>
+    <div className='max-w-[550px]  bg-white dark:bg-[#111418] p-[48px] '>
         <div className='top flex items-center gap-4'>
             
                 <img className="h-[65px] w-[65px] rounded-full" src={client1} alt="" />
 
             <div>
-                <p className='text-[16px] font-semibold font-pop text-[#ffffff] '>
+                <p className='text-[16px] font-semibold font-pop text-[#252b33] dark:text-white '>
                 Sajid
                 </p>
-                <p className='text-[16px] font-medium font-pop text-[#ffffff]/50'>
+                <p className='text-[16px] font-medium font-pop text-[#4c4d4d] dark:text-white/50'>
                     User from Usa
                 </p>
             </div>
 
          </div>
 
-         <p className='text-[16px] font-normal font-pop text-[#dee3e4] my-6 '>
+         <p className='text-[16px] font-normal font-pop text-[#4c4d4d] dark:text-[#dee3e4] my-6 '>
          “Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”
             </p>
 
@@ -172,23 +162,10 @@ const Client = () => {
             </span>
     </div>
 
-   
-
-
-
-  
-
-    
-
-   
-
-   
-
-   
-      </Slider>
+</Slider>
        </div> */}
 
-       <p className='font-pop text-white text-center text-[20px] md:text-[24px]  font-medium'> Reviews are not available. </p>
+       <p className='font-pop text-[#252b33] dark:text-white text-center text-[20px] md:text-[24px]  font-medium'> Reviews are not available. </p>
 
 
       
