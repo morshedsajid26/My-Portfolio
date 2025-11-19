@@ -37,7 +37,7 @@ export default function ThemeToggle({ className }) {
           bg-white rounded-full shadow-md 
           flex items-center justify-center  
           transition-all duration-300
-          ${dark ? "translate-x-[150%]" : "translate-x-0"}
+          ${dark ? "translate-x-[150%] md:translate-x-[130%]" : "translate-x-0"}
         `}
       >
         {dark ? <FiMoon size={14} /> : <FiSun size={14} />}
