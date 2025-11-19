@@ -1,15 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-const Li = ({className,liText,children,href}) => {
+const Li = ({ className, liText, children, href }) => {
   return (
-    <li className='list-none'>
-        <a className={`font-pop text-[16px] font-medium text-[#FAFAFA]/90 hover:text-[#20C996] transition-all duration-300  list-none ${className}`} href={href}>
-            {liText}            
-        </a>
-        {children}
+    <li className="list-none">
+      <a
+        className={`
+          font-pop text-[16px] font-medium
+          transition-all duration-300
+          hover:text-[#20C996]
+          ${className}   
+        `}
+        href={href}
+      >
+        {liText}
+      </a>
+      {children}
     </li>
-  )
-}
+  );
+};
 
-export default Li
+export default Li;

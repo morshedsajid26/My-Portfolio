@@ -19,9 +19,10 @@ const Navbar = () => {
   }, []);
 
   // ⬅️ Universal text color logic
-  const textColor = !isScrolled 
-    ? "text-white" 
-    : "text-[#252b33] dark:text-white";
+const textColor = isScrolled
+  ? "text-[#252b33] dark:text-white"
+  : "text-white";
+
 
   return (
     <nav
@@ -40,16 +41,23 @@ const Navbar = () => {
       </div>
 
       {/* Menu Section */}
-      <div
-        className={`
-          menu absolute md:static gap-x-[35px] top-0 right-0
-          h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0
-           dark:bg-[#111111] bg-white/50  backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.15)] md:bg-transparent md:dark:bg-transparent
-          -z-10 flex flex-col md:flex-row items-center justify-center gap-6
-          transition-all duration-300 overflow-y-auto md:overflow-visible
-          ${isMenuOpen ? "translate-x-0  " : "translate-x-[100%]  md:translate-x-0"}
-        `}
-      >
+  <div
+  className={`
+    menu absolute md:static gap-x-[35px] top-0 right-0
+    h-screen md:h-full w-[50%] md:w-auto py-[170px] md:py-0
+
+    -z-10 flex flex-col md:flex-row items-center justify-center gap-6
+    transition-all duration-300 overflow-y-auto md:overflow-visible
+
+    ${
+      isMenuOpen 
+        ? "translate-x-0 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.15)] bg-white/50 dark:bg-[#111111]/90"
+        : "translate-x-[100%] md:translate-x-0 bg-transparent backdrop-blur-none shadow-none"
+    }
+
+    md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none md:shadow-none
+  `}
+>
         {/* LI items — Dynamic text color */}
         <Li liText="Home" href="#home" className={textColor} />
         <Li liText="About" href="#about" className={textColor} />
