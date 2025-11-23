@@ -4,6 +4,7 @@ import TitleHeader from '../Layer/TitleHeader'
 import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
 
@@ -21,12 +22,13 @@ const Contact = () => {
       {
         method: "POST",
         body: JSON.stringify(formData),
+      
       }
     );
 
     const result = await response.json();
     if (result.status === "success") {
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } else {
       alert("Failed to send the message. Please try again.");
@@ -36,6 +38,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='bg-white dark:bg-[#212529] py-[72px] min-h-screen flex items-center'>
+         <Toaster position="top-center" />
         <Container>
             <TitleHeader className='md:mb-20 mb-10'  Heading='Contact' Ptext='Get in Touch'/>
 
