@@ -3,66 +3,75 @@ import TextAnimation from '../Layer/TextAnimation';
 import { FaChevronDown } from 'react-icons/fa';
 import Container from '../Layer/Container';
 import { motion } from "framer-motion";
+// import ParticlesBg from './ParticlesBg';
 
 const Home = () => {
-  const [color, setColor] = useState("transparent"); 
-
-  const [border, setBorder] = useState("#20c997"); 
+  const [color, setColor] = useState("transparent");
+  const [border, setBorder] = useState("#20c997");
 
   const handleClick = (isButton) => {
     setColor(isButton ? "#0d6efd" : "transparent");
     setBorder(isButton ? "#0d6efd" : "#20c997");
   };
 
-  return ( 
-    <div 
-      id='home' 
-      className='py-[205px] md:py-[220px]  sm:pt-[200px] h-screen flex items-center bg-[url(/public/sajid.jpg)] text-center relative bg-cover bg-no-repeat bg-center after:absolute after:content-[""] after:h-full after:w-full after:top-0 after:left-0 after:bg-black/30 dark:after:bg-black/45 z-0 after:-z-30' 
+  return (
+    <div
+      id="home"
+      className="relative h-screen flex items-center bg-[url(/public/sajid.jpg)] bg-cover bg-center overflow-hidden"
       onClick={() => handleClick(false)}
     >
-      <Container className=' '>
-        {/* Welcome Text */}
-        <p className='text-[22px] sm:text-[28px] md:text-[32px] font-medium text-white font-pop mb-4 z-30 '>
+      {/* 🔹 PARTICLES BACKGROUND */}
+      {/* <ParticlesBg
+  init={particlesInit}
+  options={particlesOptions}
+  className="absolute inset-0 z-0"
+  style={{ width: "100%", height: "100%" }}
+/> */}
+
+      {/* 🔹 DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/30 dark:bg-black/45 z-[5]  pointer-events-none" />
+
+      {/* 🔹 CONTENT */}
+      <Container className="relative z-10 text-center">
+        <p className="text-[22px] sm:text-[28px] md:text-[32px] font-medium text-white font-pop mb-4">
           Welcome
         </p>
 
-        {/* TextAnimation */}
-        <TextAnimation className='z-30' />
+        <TextAnimation />
 
-        {/* Location Text */}
-        <p className='text-[18px] sm:text-[21px] md:text-[24px] text-white font-pop mb-6 mt-4'>
+        <p className="text-[18px] sm:text-[21px] md:text-[24px] text-white font-pop mb-6 mt-4">
           based in Dhaka, Bangladesh.
         </p>
 
-        {/* Hire Me Button */}
-        <a 
-   
-        href="#contact">
+        <a href="#contact">
           <motion.button
-               whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             onClick={(e) => {
-              e.stopPropagation(); // Prevent parent click from firing
-              handleClick(true); // Change to color when button is clicked
+              e.stopPropagation();
+              handleClick(true);
             }}
             style={{
               backgroundColor: color,
-              color: "white",
               borderColor: border,
             }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#20c997")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = color)}
-            className='py-3 px-8 sm:px-10 border-[1.6px] border-[#20c997] hover:bg-[#20c997]/85 transition-all duration-500 rounded-full font-pop hover:text-[#ffffff] text-[#20c997] text-[14px] sm:text-[16px] font-medium'
+            onMouseEnter={(e) =>
+              (e.target.style.backgroundColor = "#20c997")
+            }
+            onMouseLeave={(e) =>
+              (e.target.style.backgroundColor = color)
+            }
+            className="py-3 px-8 sm:px-10 border-[1.6px] rounded-full font-pop transition-all duration-500 text-[#20c997] hover:text-white"
           >
             Hire Me
           </motion.button>
         </a>
       </Container>
 
-      {/* Down Arrow Icon */}
-      <div className='absolute bottom-4 sm:bottom-2 left-[49.5%] -translate-x-[49.5%] animate-bounce-slow'>
+      {/* 🔹 DOWN ARROW */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 animate-bounce-slow">
         <a href="#about">
-          <FaChevronDown className='w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] md:w-[30px] md:h-[30px] text-white font-black' />
+          <FaChevronDown className="w-[25px] h-[25px] text-white" />
         </a>
       </div>
     </div>

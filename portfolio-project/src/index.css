@@ -2,3 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ring */
+.cursor-ring {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #20C996;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.15s ease;
+  /* box-shadow: 0 0 12px #20C996; */
+}
+
+/* Center dot */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background: #20C996;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* Hover grow */
+.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Click pulse */
+.cursor-click {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #20C996, #20C996);
+  border-radius: 8px;
+  box-shadow: 0 0 10px #20C996;
+}

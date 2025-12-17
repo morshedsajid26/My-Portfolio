@@ -131,7 +131,7 @@ const Portfolio = () => {
   return (
     <div
       id="portfolio"
-      className="bg-[#f8f9fa] dark:bg-[#343a40] md:pt-[72px] pt-[200px] md:pb-[100px] pb-[250px] md:min-h-screen md:flex md:items-center"
+      className="bg-[#f8f9fa] dark:bg-[#343a40] md:pt-[72px] pt-[150px] md:pb-[150px] pb-[150px] md:min-h-screen min-h md:flex md:items-center"
     >
       <Container>
         <TitleHeader className="mb-20" Heading="portfolio" Ptext="My work" />
