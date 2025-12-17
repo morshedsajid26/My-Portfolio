@@ -12,7 +12,7 @@ const Footer = () => {
           <p className="font-pop text-sm md:text-base text-[#252b33] dark:text-white/80 px-4">
             Copyright © {currentYear}{' '}
             <a 
-              href="#" 
+              href="https://github.com/morshedsajid26" 
               className="text-[#20c997] hover:text-[#17a586] transition-all duration-300"
             >
               Sajid
