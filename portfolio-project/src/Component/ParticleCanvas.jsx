@@ -99,7 +99,7 @@ export default function ParticleCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 140) {
-            ctx.strokeStyle = `rgba(255,255,255,${1 - dist / 200})`;
+            ctx.strokeStyle = `rgba(255,255,255,${0.8 - dist / 200})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
