@@ -1,49 +1,70 @@
-import React, { useState } from 'react'
-import Container from '../Layer/Container'
-import TitleHeader from '../Layer/TitleHeader'
-import { FaFacebookF, FaGithub, FaGoogle,  FaInstagram, FaLinkedinIn, FaPhone  } from 'react-icons/fa'
+
+
+
+import React, { useState, useRef } from "react";
+import Container from "../Layer/Container";
+import TitleHeader from "../Layer/TitleHeader";
+import { FaFacebookF, FaGithub, FaGoogle, FaInstagram, FaLinkedinIn, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const formRef = useRef(null);
 
-    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzDEXRIytPiXQ7JcBzf40geoaqEOiLJUKZQDQG00Ntc-5CzYPW14mQg2XL6CZHz_g2Q/exec", 
+  emailjs
+    .send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
-        method: "POST",
-        body: JSON.stringify(formData),
-      
-      }
-    );
-
-    const result = await response.json();
-    if (result.status === "success") {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send the message. Please try again.");
-    }
-  };
-
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message");
+    });
+};
 
   return (
-    <div id='contact' className='bg-white dark:bg-[#212529] py-[72px] min-h-screen flex items-center'>
-         <Toaster position="top-center" />
-        <Container>
-            <TitleHeader className='md:mb-20 mb-10'  Heading='Contact' Ptext='Get in Touch'/>
+    <div
+      id="contact"
+      className="bg-white dark:bg-[#212529] py-[72px] min-h-screen flex items-center"
+    >
+      <Toaster position="top-center" />
+      <Container>
+        <TitleHeader
+          className="md:mb-20 mb-10"
+          Heading="Contact"
+          Ptext="Get in Touch"
+        />
 
-            <div className='md:flex font-pop '>
-                <div className='text md:w-[328px] hidden md:block'>
+        <div className="md:flex font-pop">
+                          <div className='text md:w-[328px] hidden md:block'>
                    
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>Address</h2>
@@ -102,49 +123,61 @@ const Contact = () => {
 
                 </div>
 
-                <form onSubmit={handleSubmit} className='form  md:w-[988px]'>
-                <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
-                            send me a note
-                        </h2>
+          <form onSubmit={handleSubmit} className="form md:w-[988px]">
+            <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4">
+              send me a note
+            </h2>
 
-                 <div className='flex flex-col md:flex-row md:flex gap-y-6 md:gap-y-0 justify-between '>
-                    <input className='md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white' 
-                    type="text" 
-                    placeholder='Name' 
-                    name='name'  
-                    value={formData.name}
-                    onChange={handleChange}
-                    required/>
+            <div className="flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-between">
+              <input
+                className="md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white"
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
 
-                    <input className='md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white' type="email"
-                    placeholder='Email'
-                    name='email'
-                    value={formData.email}
-                    onChange={handleChange}
-                    required/>
+              <input
+                className="md:w-[471px] py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white"
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-                    </div> 
-                    
-                    <textarea className='w-full resize-none h-20 py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0  rounded-[6px] text-[16px] text-[#252b33] dark:text-white my-6'  
-                    placeholder='Tell me more about your needs........'
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required>
-                    </textarea>  
+            <textarea
+              className="w-full resize-none h-20 py-[13px] px-[15px] outline-[#20c997] bg-white dark:bg-[#232a31] border dark:border-0 rounded-[6px] text-[16px] text-[#252b33] dark:text-white my-6"
+              placeholder="Tell me more about your needs........"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
 
-                    
-                    <div className='text-center'>
-                    <motion.button 
-                         whileHover={{ scale: 1.1 }}
-                         whileTap={{ scale: 0.95 }}
-                    type='submit' className='py-3 px-10 bg-[#20c997] hover:bg-[#20c997]/85 transition-all duration-300 rounded-full font-pop text-[#ffffff] text-[16px] font-medium '>
-                        Send Message
-                    </motion.button> 
-                        </div>   
-                </form>
+            <div className="text-center">
+              <motion.button
+                whileHover={{ scale: loading ? 1 : 1.1 }}
+                whileTap={{ scale: loading ? 1 : 0.95 }}
+                disabled={loading}
+                type="submit"
+                className={`py-3 px-10 rounded-full font-pop text-[16px] font-medium transition-all duration-300
+                  ${
+                    loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-[#20c997] hover:bg-[#20c997]/85 text-white"
+                  }`}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </motion.button>
+            </div>
+          </form>
 
-                <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
+              <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
                    
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4 '>Address</h2>
@@ -201,12 +234,10 @@ const Contact = () => {
                     </div>
 
                 </div>
-            </div>
-        </Container>
-        
+        </div>
+      </Container>
     </div>
-  )
-  
-}
+  );
+};
 
-export default Contact
+export default Contact;
