@@ -17,7 +17,7 @@ const About = () => {
            className="text w-full lg:w-full text-center ">
             <motion.h2 
              initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
+             whileInView={{ opacity: 10 }}
             className="font-pop text-[22px] md:text-[28px] font-semibold text-[#252b33] dark:text-white">
               I'm a 
               <span className="text-[#20c997]"> Frontend Developer </span>

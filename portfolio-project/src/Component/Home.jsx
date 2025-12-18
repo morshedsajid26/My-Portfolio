@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import TextAnimation from '../Layer/TextAnimation';
-import { FaChevronDown } from 'react-icons/fa';
-import Container from '../Layer/Container';
+import React, { useState } from "react";
+import TextAnimation from "../Layer/TextAnimation";
+import { FaChevronDown } from "react-icons/fa";
+import Container from "../Layer/Container";
 import { motion } from "framer-motion";
-// import ParticlesBg from './ParticlesBg';
+import ParticlesBg from "./ParticleCanvas";
+import SpotlightOverlay from "./SpotlightOverlay";
+import ParticleCanvas from "./ParticleCanvas";
 
 const Home = () => {
   const [color, setColor] = useState("transparent");
@@ -21,12 +23,10 @@ const Home = () => {
       onClick={() => handleClick(false)}
     >
       {/* 🔹 PARTICLES BACKGROUND */}
-      {/* <ParticlesBg
-  init={particlesInit}
-  options={particlesOptions}
-  className="absolute inset-0 z-0"
-  style={{ width: "100%", height: "100%" }}
-/> */}
+     
+      <ParticleCanvas />
+    
+      {/* <SpotlightOverlay /> */}
 
       {/* 🔹 DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/30 dark:bg-black/45 z-[5]  pointer-events-none" />
@@ -55,12 +55,8 @@ const Home = () => {
               backgroundColor: color,
               borderColor: border,
             }}
-            onMouseEnter={(e) =>
-              (e.target.style.backgroundColor = "#20c997")
-            }
-            onMouseLeave={(e) =>
-              (e.target.style.backgroundColor = color)
-            }
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#20c997")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = color)}
             className="py-3 px-8 sm:px-10 border-[1.6px] rounded-full font-pop transition-all duration-500 text-[#20c997] hover:text-white"
           >
             Hire Me

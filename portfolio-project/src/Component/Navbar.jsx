@@ -29,7 +29,7 @@ const textColor = isScrolled
       className={`flex justify-between items-center px-4 sm:px-6 lg:px-10 py-4 fixed w-full z-30
       ${
         isScrolled
-          ? "bg-white/50 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.15)] dark:bg-[#111111]/80  transition-all duration-700"
+          ? "bg-white/80 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.15)] dark:bg-[#111111]/80  transition-all duration-700"
           : "bg-transparent"
       }`}
     >
@@ -80,7 +80,7 @@ const textColor = isScrolled
         <ThemeToggle />
 
         {/* Hamburger Icon */}
-        <div className="md:hidden mt-[4px] mr-4">
+        <div className="md:hidden mt-[4px] mr-4 ">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? (
               <FaTimes size={24} className={textColor} />
