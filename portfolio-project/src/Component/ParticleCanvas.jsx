@@ -9,18 +9,21 @@ export default function ParticleCanvas() {
     const ctx = canvas.getContext("2d");
 
     let w, h;
+    let isMobile = window.innerWidth < 768;
+
     const resize = () => {
       w = canvas.width = canvas.parentElement.offsetWidth;
       h = canvas.height = canvas.parentElement.offsetHeight;
+      isMobile = window.innerWidth < 768;
     };
     resize();
     window.addEventListener("resize", resize);
 
-    // ---------------- Mouse ----------------
+    // ---------------- Mouse / Touch ----------------
     const mouse = {
       x: null,
       y: null,
-      radius: 120,
+      radius: isMobile ? 80 : 120,
     };
 
     const mouseMove = (e) => {
@@ -29,13 +32,21 @@ export default function ParticleCanvas() {
       mouse.y = e.clientY - rect.top;
     };
 
-    const mouseLeave = () => {
+    const touchMove = (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.touches[0].clientX - rect.left;
+      mouse.y = e.touches[0].clientY - rect.top;
+    };
+
+    const leave = () => {
       mouse.x = null;
       mouse.y = null;
     };
 
     canvas.addEventListener("mousemove", mouseMove);
-    canvas.addEventListener("mouseleave", mouseLeave);
+    canvas.addEventListener("mouseleave", leave);
+    canvas.addEventListener("touchmove", touchMove, { passive: true });
+    canvas.addEventListener("touchend", leave);
 
     // ---------------- Particle ----------------
     class Particle {
@@ -43,24 +54,19 @@ export default function ParticleCanvas() {
         this.x = Math.random() * w;
         this.y = Math.random() * h;
 
-        this.baseX = this.x;
-        this.baseY = this.y;
+        this.vx = (Math.random() - 0.5) * (isMobile ? 0.4 : 0.8);
+        this.vy = (Math.random() - 0.5) * (isMobile ? 0.4 : 0.8);
 
-        this.vx = (Math.random() - 0.5) * 0.80;
-        this.vy = (Math.random() - 0.5) * 0.80;
-
-        this.size = 4;
+        this.size = isMobile ? 2.5 : 4;
       }
 
       update() {
-        // normal movement
         this.x += this.vx;
         this.y += this.vy;
 
         if (this.x < 0 || this.x > w) this.vx *= -1;
         if (this.y < 0 || this.y > h) this.vy *= -1;
 
-        // mouse interaction (BREAK effect)
         if (mouse.x !== null) {
           const dx = this.x - mouse.x;
           const dy = this.y - mouse.y;
@@ -68,8 +74,8 @@ export default function ParticleCanvas() {
 
           if (dist < mouse.radius) {
             const force = (mouse.radius - dist) / mouse.radius;
-            this.x += (dx / dist) * force * 20;
-            this.y += (dy / dist) * force * 20;
+            this.x += (dx / dist) * force * (isMobile ? 10 : 20);
+            this.y += (dy / dist) * force * (isMobile ? 10 : 20);
           }
         }
       }
@@ -84,7 +90,7 @@ export default function ParticleCanvas() {
 
     // ---------------- Init ----------------
     const particles = [];
-    const COUNT = 300;
+    const COUNT = isMobile ? 150 : 300; // 🔥 mobile = half
 
     for (let i = 0; i < COUNT; i++) {
       particles.push(new Particle());
@@ -92,13 +98,15 @@ export default function ParticleCanvas() {
 
     // ---------------- Lines ----------------
     const connect = () => {
+      const maxDist = isMobile ? 100 : 140;
+
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 140) {
+          if (dist < maxDist) {
             ctx.strokeStyle = `rgba(255,255,255,${0.8 - dist / 200})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -121,7 +129,6 @@ export default function ParticleCanvas() {
       });
 
       connect();
-
       animationId = requestAnimationFrame(animate);
     };
 
@@ -132,7 +139,9 @@ export default function ParticleCanvas() {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
       canvas.removeEventListener("mousemove", mouseMove);
-      canvas.removeEventListener("mouseleave", mouseLeave);
+      canvas.removeEventListener("mouseleave", leave);
+      canvas.removeEventListener("touchmove", touchMove);
+      canvas.removeEventListener("touchend", leave);
     };
   }, []);
 
