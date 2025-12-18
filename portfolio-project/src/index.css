@@ -41,10 +41,10 @@
 
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
 }
 
-/* :-webkit-scrollbar-track {
+:-webkit-scrollbar-track {
   background: transparent ;
   border-radius: 12px;
 
@@ -58,7 +58,7 @@
   background: linear-gradient(180deg, #20C996, #20C996);
   border-radius: 12px;
  
-} */
+}
 
 
 /* ===== Particle Background ===== */
