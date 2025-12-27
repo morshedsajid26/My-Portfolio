@@ -69,7 +69,7 @@ const Contact = () => {
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>Address</h2>
                     <p className='text-[#4c4d4d] dark:text-[#dee3e4] text-[16px] w-[190px]'>
-                        House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
+                        House , Road , Block , Mirpur 12, Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
@@ -182,7 +182,7 @@ const Contact = () => {
                    <div className="address">
                    <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4 '>Address</h2>
                     <p className='text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px] w-[190px]'>
-                         House 47, Road 31, Block D, Mirpur 12, Dhaka 1216, Bangladesh
+                         House , Road , Block , Mirpur , Dhaka 1216, Bangladesh
                     </p>
                    </div>
 
