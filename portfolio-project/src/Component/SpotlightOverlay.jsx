@@ -1,4 +1,5 @@
-import useMousePosition from "../hooks/useMousePosition";
+
+import useMousePosition from "../hooks/UseMousePosition";
 
 
 export default function SpotlightOverlay() {
