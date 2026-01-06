@@ -90,7 +90,7 @@ export default function ParticleCanvas() {
 
     // ---------------- Init ----------------
     const particles = [];
-    const COUNT = isMobile ? 50 : 300; // 🔥 mobile = half
+    const COUNT = isMobile ? 50 : 300; 
 
     for (let i = 0; i < COUNT; i++) {
       particles.push(new Particle());

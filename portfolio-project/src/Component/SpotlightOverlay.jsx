@@ -1,6 +1,4 @@
-
 import useMousePosition from "../hooks/UseMousePosition";
-
 
 export default function SpotlightOverlay() {
   const { x, y } = useMousePosition();

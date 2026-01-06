@@ -23,9 +23,9 @@ const Home = () => {
       onClick={() => handleClick(false)}
     >
       {/* 🔹 PARTICLES BACKGROUND */}
-     
+
       <ParticleCanvas />
-    
+
       {/* <SpotlightOverlay /> */}
 
       {/* 🔹 DARK OVERLAY */}

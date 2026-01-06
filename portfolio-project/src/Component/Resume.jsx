@@ -1,21 +1,23 @@
-import React from 'react';
-import Container from '../Layer/Container';
-import TitleHeader from '../Layer/TitleHeader';
-import ResumeCard from '../Layer/ResumeCard';
-import { FaDownload } from 'react-icons/fa';
-import Skills from './Skills';
+import React from "react";
+import Container from "../Layer/Container";
+import TitleHeader from "../Layer/TitleHeader";
+import ResumeCard from "../Layer/ResumeCard";
+import { FaDownload } from "react-icons/fa";
+import Skills from "./Skills";
 import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
-    <div id='resume' className="bg-white dark:bg-[#212529] py-12 font-pop min-h-screen flex items-center">
+    <div
+      id="resume"
+      className="bg-white dark:bg-[#212529] py-12 font-pop min-h-screen flex items-center"
+    >
       <Container>
         {/* Title Header */}
         <TitleHeader Heading="Summary" Ptext="Resume" />
 
         {/* Education and Experience Section */}
         <div className="resume w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
-          
           {/* Education */}
           <div className="education flex flex-col gap-6">
             <h2 className="text-[#252b33] dark:text-white text-[24px] font-semibold">
@@ -49,7 +51,6 @@ const Resume = () => {
               institute="Fire AI - Betopia Group"
               details="Developing and maintaining user interfaces, ensuring responsive design, and optimizing performance for web applications."
             />
-
           </div>
         </div>
 
@@ -57,12 +58,16 @@ const Resume = () => {
         {/* <Skills className="my-12" /> */}
 
         {/* Download CV Button */}
-        <motion.button 
+        <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="mt-12 py-3 px-10 text-[#6c757d] hover:text-white hover:bg-[#6c757d]/85 transition-all duration-300 rounded-full font-pop border-[#6c757d] border-[1.6px] text-[16px] font-medium flex mx-auto"
         >
-          <a href="/CV.Sajid.pdf" download="CV.Sajid.pdf" className='flex items-center justify-center gap-2'>
+          <a
+            href="/CV.Sajid.pdf"
+            download="CV.Sajid.pdf"
+            className="flex items-center justify-center gap-2"
+          >
             Download CV
             <FaDownload />
           </a>

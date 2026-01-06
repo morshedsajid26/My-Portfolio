@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from '../Layer/Container';
+import React from "react";
+import Container from "../Layer/Container";
 
 const Footer = () => {
   // Get the current year dynamically
@@ -10,9 +10,9 @@ const Footer = () => {
       <Container>
         <div>
           <p className="font-pop text-sm md:text-base text-[#252b33] dark:text-white/80 px-4">
-            Copyright © {currentYear}{' '}
-            <a 
-              href="https://github.com/morshedsajid26" 
+            Copyright © {currentYear}{" "}
+            <a
+              href="https://github.com/morshedsajid26"
               className="text-[#20c997] hover:text-[#17a586] transition-all duration-300"
             >
               Sajid

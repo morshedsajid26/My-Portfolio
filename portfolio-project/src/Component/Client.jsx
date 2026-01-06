@@ -1,13 +1,11 @@
-import React from 'react'
-import Container from '../Layer/Container'
-import TitleHeader from '../Layer/TitleHeader'
-import ReviewCard from '../Layer/ReviewCard'
+import React from "react";
+import Container from "../Layer/Container";
+import TitleHeader from "../Layer/TitleHeader";
+import ReviewCard from "../Layer/ReviewCard";
 
-import client1 from '/client1.png'
+import client1 from "/client1.png";
 import Slider from "react-slick";
-import {  FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
-
-
+import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
 
 // function SampleNextArrow(props) {
 //   const {  style, onClick } = props;
@@ -39,32 +37,27 @@ import {  FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 //   );
 // }
 
-
-
-
 const Client = () => {
-
-//   const settings = {
-//     dots: false,
-//       infinite: true,
-//       arrows: true,
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     speed: 3500,
-//     autoplaySpeed: 3500,
-//     cssEase: "linear",
-//     nextArrow: <SampleNextArrow />,
-//       prevArrow: <SamplePrevArrow />
-//   };
-
+  //   const settings = {
+  //     dots: false,
+  //       infinite: true,
+  //       arrows: true,
+  //     slidesToShow: 2,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     speed: 3500,
+  //     autoplaySpeed: 3500,
+  //     cssEase: "linear",
+  //     nextArrow: <SampleNextArrow />,
+  //       prevArrow: <SamplePrevArrow />
+  //   };
 
   return (
-    <div id='client' className='bg-white dark:bg-[#212529] py-[72px]'>
-         <Container>
-        <TitleHeader Heading='testimonial' Ptext='client speak'/>
+    <div id="client" className="bg-white dark:bg-[#212529] py-[72px]">
+      <Container>
+        <TitleHeader Heading="testimonial" Ptext="client speak" />
 
-       {/* <div className='max-w-[1296px] h-[300px] overflow-hidden  ' >
+        {/* <div className='max-w-[1296px] h-[300px] overflow-hidden  ' >
        
 
 
@@ -165,13 +158,13 @@ const Client = () => {
 </Slider>
        </div> */}
 
-       <p className='font-pop text-[#252b33] dark:text-white text-center text-[20px] md:text-[24px]  font-medium'> Reviews are not available. </p>
-
-
-      
-        </Container>
+        <p className="font-pop text-[#252b33] dark:text-white text-center text-[20px] md:text-[24px]  font-medium">
+          {" "}
+          Reviews are not available.{" "}
+        </p>
+      </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Client
+export default Client;

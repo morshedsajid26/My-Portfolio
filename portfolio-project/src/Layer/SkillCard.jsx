@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SkillCard = ({ Name, Percentage, className, width }) => {
   return (
@@ -11,9 +11,7 @@ const SkillCard = ({ Name, Percentage, className, width }) => {
 
       {/* Progress Bar */}
       <div className="w-full h-2 bg-[#111418] rounded relative">
-      <div className={`absolute bg-[#20c997]  h-2 rounded ${width}`}>
-
-</div>
+        <div className={`absolute bg-[#20c997]  h-2 rounded ${width}`}></div>
       </div>
     </div>
   );

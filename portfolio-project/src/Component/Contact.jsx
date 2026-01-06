@@ -1,10 +1,14 @@
-
-
-
 import React, { useState, useRef } from "react";
 import Container from "../Layer/Container";
 import TitleHeader from "../Layer/TitleHeader";
-import { FaFacebookF, FaGithub, FaGoogle, FaInstagram, FaLinkedinIn, FaPhone } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaGoogle,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhone,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
@@ -26,29 +30,29 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  emailjs
-    .send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        time: new Date().toLocaleString(),
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(() => {
-      toast.success("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    })
-    .catch((error) => {
-      console.error("EmailJS Error:", error);
-      toast.error("Failed to send message");
-    });
-};
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        toast.error("Failed to send message");
+      });
+  };
 
   return (
     <div
@@ -64,64 +68,81 @@ const Contact = () => {
         />
 
         <div className="md:flex font-pop">
-                          <div className='text md:w-[328px] hidden md:block'>
-                   
-                   <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>Address</h2>
-                    <p className='text-[#4c4d4d] dark:text-[#dee3e4] text-[16px] w-[190px]'>
-                        House , Road , Block , Mirpur 12, Dhaka 1216, Bangladesh
-                    </p>
-                   </div>
+          <div className="text md:w-[328px] hidden md:block">
+            <div className="address">
+              <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4">
+                Address
+              </h2>
+              <p className="text-[#4c4d4d] dark:text-[#dee3e4] text-[16px] w-[190px]">
+                House , Road , Block , Mirpur 12, Dhaka 1216, Bangladesh
+              </p>
+            </div>
 
-                    <div className=' my-4'>
-                        
-                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>   
-                        <span className='text-[#20c997] text-[18px]'>  
-                            <FaPhone />
-                            </span>
-                         +880 1756899699
-                        </p>
+            <div className=" my-4">
+              <p className="flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]">
+                <span className="text-[#20c997] text-[18px]">
+                  <FaPhone />
+                </span>
+                +880 1756899699
+              </p>
 
-                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>                      
-                        <span className='text-[#20c997] text-[18px]' > 
-                            <MdEmail />
-                            </span>
-                        <a href="mailto:neazmorshed407@gmail.com">
-                        neazmorshed407@gmail.com
-                        </a>
-                        </p>
-                    </div>
+              <p className="flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]">
+                <span className="text-[#20c997] text-[18px]">
+                  <MdEmail />
+                </span>
+                <a href="mailto:neazmorshed407@gmail.com">
+                  neazmorshed407@gmail.com
+                </a>
+              </p>
+            </div>
 
-                    <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
-                            follow me
-                        </h2>
+            <div className="icon">
+              <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4">
+                follow me
+              </h2>
 
-                        <ul className='flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5' >
-                        <li className="w-[26px] h-[26px] flex items-center justify-center">
-                                       <a href="https://github.com/morshedsajid26" aria-label="GitHub">
-                                         <FaGithub />
-                                       </a>
-                                     </li>
+              <ul className="flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5">
+                <li className="w-[26px] h-[26px] flex items-center justify-center">
+                  <a
+                    href="https://github.com/morshedsajid26"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub />
+                  </a>
+                </li>
 
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.facebook.com/snmsajid26" aria-label='Facebook'><FaFacebookF /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                            </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="mailto:neazmorshed407@gmail.com"><FaGoogle /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
-                                </li>
-                        </ul>
-                    </div>
-
-
-
-                </div>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a
+                    href="https://www.facebook.com/snmsajid26"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebookF />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center">
+                  <a
+                    href="https://www.linkedin.com/in/neaz-morshed-sajid"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a href="mailto:neazmorshed407@gmail.com">
+                    <FaGoogle />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a
+                    href="https://www.instagram.com/neaz_morshed_sajid"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <form onSubmit={handleSubmit} className="form md:w-[988px]">
             <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4">
@@ -177,63 +198,81 @@ const Contact = () => {
             </div>
           </form>
 
-              <div className='text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3'>
-                   
-                   <div className="address">
-                   <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4 '>Address</h2>
-                    <p className='text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px] w-[190px]'>
-                         House , Road , Block , Mirpur , Dhaka 1216, Bangladesh
-                    </p>
-                   </div>
+          <div className="text w-[328px] bg-slae-200  md:hidden flex flex-col mx-auto text-center items-center justify-center mt-10 gap-y-3">
+            <div className="address">
+              <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4 ">
+                Address
+              </h2>
+              <p className="text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px] w-[190px]">
+                House , Road , Block , Mirpur , Dhaka 1216, Bangladesh
+              </p>
+            </div>
 
-                    <div className=' my-4'>
-                        
-                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px]'>   
-                        <span className='text-[#20c997] text-[18px]'>  
-                            <FaPhone />
-                            </span>
-                         +880 1756899699
-                        </p>
+            <div className=" my-4">
+              <p className="flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4]  text-[16px]">
+                <span className="text-[#20c997] text-[18px]">
+                  <FaPhone />
+                </span>
+                +880 1756899699
+              </p>
 
-                        <p className='flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]'>                      
-                        <span className='text-[#20c997] text-[18px]' > 
-                            <MdEmail />
-                            </span>
-                        <a href="mailto:neazmorshed407@gmail.com">
-                        neazmorshed407@gmail.com
-                        </a>
-                        </p>
-                    </div>
+              <p className="flex items-center gap-2 font-pop text-[#4c4d4d] dark:text-[#dee3e4] text-[16px]">
+                <span className="text-[#20c997] text-[18px]">
+                  <MdEmail />
+                </span>
+                <a href="mailto:neazmorshed407@gmail.com">
+                  neazmorshed407@gmail.com
+                </a>
+              </p>
+            </div>
 
-                    <div className="icon">
-                        <h2 className='uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4'>
-                            follow me
-                        </h2>
+            <div className="icon">
+              <h2 className="uppercase text-[21px] text-[#252b33] dark:text-white font-medium mb-4">
+                follow me
+              </h2>
 
-                        <ul className='flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5' >
-                           <li className="w-[26px] h-[26px] flex items-center justify-center">
-                                       <a href="https://github.com/morshedsajid26" aria-label="GitHub">
-                                         <FaGithub />
-                                       </a>
-                                     </li>
+              <ul className="flex text-[#4c4d4d] dark:text-[#dee3e4] gap-2.5">
+                <li className="w-[26px] h-[26px] flex items-center justify-center">
+                  <a
+                    href="https://github.com/morshedsajid26"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub />
+                  </a>
+                </li>
 
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.facebook.com/snmsajid26" aria-label='Facebook'><FaFacebookF /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center'>
-                                <a href="https://www.linkedin.com/in/neaz-morshed-sajid" aria-label="LinkedIn"><FaLinkedinIn /></a>
-                            </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="mailto:neazmorshed407@gmail.com"><FaGoogle /></a>
-                                </li>
-                            <li className='w-[26px] h-[26px] flex items-center justify-center '>
-                                <a href="https://www.instagram.com/neaz_morshed_sajid" aria-label="Instagram"><FaInstagram /></a>
-                                </li>
-                            
-                        </ul>
-                    </div>
-
-                </div>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a
+                    href="https://www.facebook.com/snmsajid26"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebookF />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center">
+                  <a
+                    href="https://www.linkedin.com/in/neaz-morshed-sajid"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a href="mailto:neazmorshed407@gmail.com">
+                    <FaGoogle />
+                  </a>
+                </li>
+                <li className="w-[26px] h-[26px] flex items-center justify-center ">
+                  <a
+                    href="https://www.instagram.com/neaz_morshed_sajid"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Container>
     </div>

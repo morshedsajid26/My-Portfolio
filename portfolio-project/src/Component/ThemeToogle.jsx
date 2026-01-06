@@ -48,7 +48,11 @@ export default function ThemeToggle({ className }) {
         className={`
           absolute inset-0 rounded-full pointer-events-none 
           transition-opacity duration-300
-          ${dark ? "opacity-90 bg-gradient-to-r from-[#20c997]/20 via-[#38e0bb]/25 to-[#b2fff7]/30" : "opacity-0"}
+          ${
+            dark
+              ? "opacity-90 bg-gradient-to-r from-[#20c997]/20 via-[#38e0bb]/25 to-[#b2fff7]/30"
+              : "opacity-0"
+          }
         `}
       ></div>
     </div>
