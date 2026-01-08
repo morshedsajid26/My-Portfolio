@@ -27,7 +27,7 @@ const Navbar = () => {
   // ⬅️ Universal text color logic
   const textColor = isScrolled
     ? "text-[#252b33] dark:text-white"
-    : "text-white";
+    : "text-[#252b33] dark:text-white";
 
   return (
     <nav

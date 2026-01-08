@@ -19,27 +19,28 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative h-screen flex items-center bg-[url(/public/sajid.jpg)] bg-cover bg-center overflow-hidden"
+      className="relative h-screen flex items-center  bg-cover bg-center overflow-hidden bg-[#f8f9fa] dark:bg-[#343a40]"
       onClick={() => handleClick(false)}
     >
+      {/* bg-[url(/public/sajid.jpg)] */}
       {/* 🔹 PARTICLES BACKGROUND */}
 
-      <ParticleCanvas />
+      {/* <ParticleCanvas /> */}
 
       {/* <SpotlightOverlay /> */}
 
       {/* 🔹 DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/30 dark:bg-black/45 z-[5]  pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-black/30 dark:bg-black/45 z-[5]  pointer-events-none" /> */}
 
       {/* 🔹 CONTENT */}
-      <Container className="relative z-10 text-center">
-        <p className="text-[22px] sm:text-[28px] md:text-[32px] font-medium text-white font-pop mb-4">
+      <Container className="relative z-20 text-center">
+        <p className="text-[22px] sm:text-[28px] md:text-[32px] font-medium text-[#252b33] dark:text-white font-pop mb-4">
           Welcome
         </p>
 
         <TextAnimation />
 
-        <p className="text-[18px] sm:text-[21px] md:text-[24px] text-white font-pop mb-6 mt-4">
+        <p className="text-[18px] sm:text-[21px] md:text-[24px] text-[#252b33] dark:text-white font-pop mb-6 mt-4">
           based in Dhaka, Bangladesh.
         </p>
 
@@ -67,7 +68,7 @@ const Home = () => {
       {/* 🔹 DOWN ARROW */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 animate-bounce-slow">
         <a href="#about">
-          <FaChevronDown className="w-[25px] h-[25px] text-white" />
+          <FaChevronDown className="w-[25px] h-[25px] text-black dark:text-white" />
         </a>
       </div>
     </div>
