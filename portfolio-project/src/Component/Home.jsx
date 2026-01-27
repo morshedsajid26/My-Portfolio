@@ -3,9 +3,9 @@ import TextAnimation from "../Layer/TextAnimation";
 import { FaChevronDown } from "react-icons/fa";
 import Container from "../Layer/Container";
 import { motion } from "framer-motion";
-import ParticlesBg from "./ParticleCanvas";
-import SpotlightOverlay from "./SpotlightOverlay";
-import ParticleCanvas from "./ParticleCanvas";
+// import ParticlesBg from "./ParticleCanvas";
+// import SpotlightOverlay from "./SpotlightOverlay";
+// import ParticleCanvas from "./ParticleCanvas";
 
 const Home = () => {
   const [color, setColor] = useState("transparent");
