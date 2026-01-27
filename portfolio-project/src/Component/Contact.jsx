@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-white dark:bg-[#212529] py-[72px] min-h-screen flex items-center"
+      className="bg-white dark:bg-[#343a40] py-[72px] min-h-screen flex items-center"
     >
       <Toaster position="top-center" />
       <Container>

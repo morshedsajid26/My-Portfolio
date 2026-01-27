@@ -10,7 +10,7 @@ const Resume = () => {
   return (
     <div
       id="resume"
-      className="bg-white dark:bg-[#212529] py-12 font-pop min-h-screen flex items-center"
+      className="bg-white dark:bg-[#343a40] py-12 font-pop min-h-screen flex items-center"
     >
       <Container>
         {/* Title Header */}

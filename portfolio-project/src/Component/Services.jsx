@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="bg-[#f8f9fa] dark:bg-[#343a40] py-[72px] min-h-screen flex items-center"
+      className="bg-[#f8f9fa] dark:bg-[#212529] py-[72px] min-h-screen flex items-center"
     >
       <Container>
         <TitleHeader

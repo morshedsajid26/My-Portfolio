@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="bg-white dark:bg-[#212529] py-[72px] h-screen flex items-center"
+      className="bg-white dark:bg-[#343a40] py-[72px] h-screen flex items-center"
     >
       <Container>
         <TitleHeader Heading="About me" Ptext="Know me more" />

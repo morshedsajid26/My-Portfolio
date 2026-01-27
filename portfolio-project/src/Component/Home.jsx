@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative h-screen flex items-center  bg-cover bg-center overflow-hidden bg-[#f8f9fa] dark:bg-[#343a40]"
+      className="relative h-screen flex items-center  bg-cover bg-center overflow-hidden bg-[#f8f9fa] dark:bg-[#212529]"
       onClick={() => handleClick(false)}
     >
       {/* bg-[url(/public/sajid.jpg)] */}
@@ -81,7 +81,7 @@ const Home = () => {
       {/* </div> */}
 
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-[#20c997] rounded-full  bg-[url(/public/sajidImage.png)]  bg-cover bg-no-repeat md:w-[450px] md:h-[450px] w-[300px] h-[300px] ">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-[#20c997] rounded-full  bg-[url(/public/sajidImage2.png)]  bg-cover bg-no-repeat md:w-[450px] md:h-[450px] w-[300px] h-[300px] ">
          
 
           </div>
