@@ -33,8 +33,9 @@ const Home = () => {
       {/* <div className="absolute inset-0 bg-black/30 dark:bg-black/45 z-[5]  pointer-events-none" /> */}
 
       {/* 🔹 CONTENT */}
-      <Container className="relative z-20 text-center">
-        <p className="text-[22px] sm:text-[28px] md:text-[32px] font-medium text-[#252b33] dark:text-white font-pop mb-4">
+      <Container className="relative z-20 text-center flex flex-col-reverse md:flex-row  items-center justify-between gap-10 md:gap-20 ">
+        <div className="w-[500px] sm:w-[600px] md:w-[700px] lg:w-[800px]">
+          <p className="text-[22px] sm:text-[28px] md:text-[32px] font-medium text-[#252b33] dark:text-white font-pop mb-4">
           Welcome
         </p>
 
@@ -63,6 +64,32 @@ const Home = () => {
             Hire Me
           </motion.button>
         </a>
+        </div>
+        <div>
+
+         <div className="relative">
+           <div  className=" border md:w-[520px] w-[350px] h-[350px] md:h-[520px]  border-[#20c997] rounded-full   animate-spin-slow"> 
+
+            {/* Rotating ring + dots */}
+      {/* <div className="absolute w-[230px] h-[230px] rounded-full border-2 border-yellow-400 animate-spin-slow"> */}
+        
+        {/* Left dot */}
+        <span className="absolute top-1/2 -left-[10px] md:-left-[20px] w-[20px]  md:w-[40px] h-[20px] md:h-[40px] bg-[#20c997] rounded-full -translate-y-1/2" />
+        
+        {/* Right dot */}
+        <span className="absolute top-1/2 -right-[10px] md:-right-[20px] w-[20px] md:w-[40px] h-[20px] md:h-[40px] bg-[#20c997] rounded-full -translate-y-1/2" />
+      {/* </div> */}
+
+          </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-[#20c997] rounded-full  bg-[url(/public/sajidImage.png)]  bg-cover bg-no-repeat md:w-[450px] md:h-[450px] w-[300px] h-[300px] ">
+         
+
+          </div>
+         </div>
+
+
+       
+        </div>
       </Container>
 
       {/* 🔹 DOWN ARROW */}

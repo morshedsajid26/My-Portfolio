@@ -14,6 +14,9 @@ export default {
     extend: {
       animation: {
         'bounce-slow': 'bounce 4s linear infinite',
+      
+        'spin-slow': 'spin 15s linear infinite',
+     
       }
     },
   },
