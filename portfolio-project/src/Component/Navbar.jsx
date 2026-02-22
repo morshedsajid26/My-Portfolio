@@ -16,12 +16,39 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [activeSection, setActiveSection] = useState("home");
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.5,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const sectionIds = ["home", "about", "services", "resume", "portfolio", "contact"];
+    
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   // ⬅️ Universal text color logic
@@ -67,12 +94,12 @@ const Navbar = () => {
   `}
       >
         {/* LI items — Dynamic text color */}
-        <Li liText="Home" href="#home" className={textColor} />
-        <Li liText="About" href="#about" className={textColor} />
-        <Li liText="Services" href="#services" className={textColor} />
-        <Li liText="Resume" href="#resume" className={textColor} />
-        <Li liText="Portfolio" href="#portfolio" className={textColor} />
-        <Li liText="Contact" href="#contact" className={textColor} />
+        <Li liText="Home" href="#home" className={textColor} active={activeSection === "home"} />
+        <Li liText="About" href="#about" className={textColor} active={activeSection === "about"} />
+        <Li liText="Services" href="#services" className={textColor} active={activeSection === "services"} />
+        <Li liText="Resume" href="#resume" className={textColor} active={activeSection === "resume"} />
+        <Li liText="Portfolio" href="#portfolio" className={textColor} active={activeSection === "portfolio"} />
+        <Li liText="Contact" href="#contact" className={textColor} active={activeSection === "contact"} />
 
         {/* Mobile Social Icons */}
         <ul className={`mt-4 justify-end gap-4 md:hidden flex ${textColor}`}>
