@@ -19,7 +19,13 @@ const Resume = () => {
         {/* Education and Experience Section */}
         <div className="resume w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
           {/* Education */}
-          <div className="education flex flex-col gap-6">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="education flex flex-col gap-6"
+          >
             <h2 className="text-[#252b33] dark:text-white text-[24px] font-semibold">
               My Education
             </h2>
@@ -37,10 +43,16 @@ const Resume = () => {
               institute="Creative IT Institute"
               details="Learned HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React, Next.js, and building responsive, dynamic web applications."
             />
-          </div>
+          </motion.div>
 
           {/* Experience */}
-          <div className="experience flex flex-col gap-6">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="experience flex flex-col gap-6"
+          >
             <h2 className="text-[#252b33] dark:text-white text-[24px] font-semibold">
               My Experience
             </h2>
@@ -51,27 +63,31 @@ const Resume = () => {
               institute="Fire AI - Betopia Group"
               details="Developing and maintaining user interfaces, ensuring responsive design, and optimizing performance for web applications."
             />
-          </div>
+          </motion.div>
         </div>
 
-        {/* Skills Section */}
-        {/* <Skills className="my-12" /> */}
-
         {/* Download CV Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-12 py-3 px-10 text-[#6c757d] hover:text-white hover:bg-[#6c757d]/85 transition-all duration-300 rounded-full font-pop border-[#6c757d] border-[1.6px] text-[16px] font-medium flex mx-auto"
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <a
-            href="/CV.Sajid.pdf"
-            download="CV.Sajid.pdf"
-            className="flex items-center justify-center gap-2"
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-12 py-3 px-10 text-[#6c757d] hover:text-white hover:bg-[#6c757d]/85 transition-all duration-300 rounded-full font-pop border-[#6c757d] border-[1.6px] text-[16px] font-medium flex mx-auto"
           >
-            Download CV
-            <FaDownload />
-          </a>
-        </motion.button>
+            <a
+              href="/CV.Sajid.pdf"
+              download="CV.Sajid.pdf"
+              className="flex items-center justify-center gap-2"
+            >
+              Download CV
+              <FaDownload />
+            </a>
+          </motion.button>
+        </motion.div>
       </Container>
     </div>
   );

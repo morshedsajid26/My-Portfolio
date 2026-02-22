@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import { RiComputerLine } from "react-icons/ri";
 import { HiLink, HiOutlineRocketLaunch } from "react-icons/hi2";
@@ -22,7 +23,21 @@ const Services = () => {
           Ptext="What i do?"
         />
 
-        <div className="w-full grid md:grid-cols-2 gap-12">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          className="w-full grid md:grid-cols-2 gap-8 md:gap-12"
+        >
           <ServicePart
             icon={<RiComputerLine className="h-[30px] w-[33px]" />}
             Heading="Web Development"
@@ -58,7 +73,7 @@ const Services = () => {
             Heading="Version Control and Deployment"
             pText="Use tools like Git for code management and deploy websites seamlessly."
           />
-        </div>
+        </motion.div>
       </Container>
     </div>
   );
