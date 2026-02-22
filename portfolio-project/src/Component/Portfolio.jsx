@@ -1,181 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Layer/Container";
+import ProjectCard from "./ProjectCard";
 import TitleHeader from "../Layer/TitleHeader";
+import { motion, AnimatePresence } from "framer-motion";
+
 import orebi from "/Orebi.png";
 import furnishop from "/Furnishop.png";
 import agenc from "/Agenc.png";
 import gericht from "/Gericht.png";
 import UNIAO from "/UNIAO.png";
 
-import Slider from "react-slick";
-import { FiExternalLink } from "react-icons/fi";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+const projects = [
+  {
+    image: orebi,
+    name: "OREBI E-Commerce",
+    category: "E-Commerce",
+    techs: ["React", "Tailwind CSS", "Redux",],
+    description: "A premium e-commerce platform featuring complex filtering, cart management, and a high-performance checkout flow.",
+    link: "https://orebi-one.vercel.app/",
+  },
+  {
+    image: gericht,
+    name: "Gericht Fine Dining",
+    category: "Landing Page",
+    techs: ["React", "CSS3", "Framer Motion"],
+    description: "A visually stunning immersive web experience for high-end dining, focusing on elegant typography and transitions.",
+    link: "https://gericht-food-restaurant.vercel.app/",
+  },
+  {
+    image: UNIAO,
+    name: "UNIAO Agency",
+    category: "Landing Page",
+    techs: ["React", "Framer Motion", "Tailwind"],
+    description: "A bold, modern agency portfolio designed to showcase high-impact services and creative excellence.",
+    link: "https://uniao-one.vercel.app/",
+  },
+  {
+    image: furnishop,
+    name: "FurniShop Interiors",
+    category: "Landing Page",
+    techs: ["React", "Tailwind CSS", "AOS"],
+    description: "Minimalist digital storefront for interior brands, emphasizing clean visual hierarchy and lightning-fast speed.",
+    link: "https://furni-shop-snms.vercel.app",
+  },
+  {
+    image: agenc,
+    name: "Agenc Creative",
+    category: "Landing Page",
+    techs: ["HTML5", "Bootstrap 5", "jQuery"],
+    description: "Performance-oriented professional landing page for creative agencies establishment.",
+    link: "https://agenc-snms.vercel.app/",
+  }
+];
 
-function SampleNextArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] right-1/2 translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-white dark:bg-[#212529] shadow hover:bg-[#20c997] dark:hover:bg-[#20c997] transition-all duration-500 cursor-pointer z-10"
-      style={{ ...style, display: "flex" }}
-      onClick={onClick}
-    >
-      <div className="w-full h-full flex items-center justify-center transition-all duration-500">
-        <FaArrowRight className="text-[#252b33] dark:text-white" />
-      </div>
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      className="absolute w-[36px] md:w-[50px] h-[36px] md:h-[50px] left-1/2 -translate-x-[200%] -bottom-[80px] md:-bottom-[100px] rounded-full items-center justify-center bg-white dark:bg-[#212529] shadow hover:bg-[#20c997] dark:hover:bg-[#20c997] transition-all duration-500 cursor-pointer z-10"
-      style={{ ...style, display: "flex" }}
-      onClick={onClick}
-    >
-      <div className="w-full h-full flex items-center justify-center transition-all duration-500">
-        <FaArrowLeft className="text-[#252b33] dark:text-white" />
-      </div>
-    </div>
-  );
-}
-
-let SliderCard = ({ image, name, techs, link }) => {
-  return (
-    <div className="relative aspect-[624/330] md:aspect-[624/350] rounded-[10px] font-pop mx-1.5 md:mx-3">
-      <img className="h-full w-full rounded-[10px]" src={image} alt={image} />
-
-      <div className="h-full w-full absolute top-0 bg-black/65 flex flex-col rounded-[10px] opacity-0 hover:opacity-100 transition-all duration-500 justify-between pb-3">
-        <h3 className="text-[25px] md:text-[40px] text-white/70 text-center">
-          {name}
-        </h3>
-
-        <div className="mx-auto">
-          <h3 className="text-[16px] md:text-[22px] text-white/70 text-center">
-            Technologies
-          </h3>
-
-          <div className="tools flex gap-2 mt-3">
-            {techs.map((item, index) => (
-              <h5
-                key={index}
-                className="px-1 md:px-4 py-[3px] md:py-2 bg-[#212529]/80 text-white/70 rounded-full font-semibold text-[12px] md:text-[16px]"
-              >
-                {item}
-              </h5>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex justify-between">
-          <div className="px-2 md:px-3 py-1 md:py-2 bg-[#212529]/80 text-white/70 rounded-full flex justify-center items-center cursor-pointer mx-auto font-medium mt-5">
-            <a
-              className="flex justify-center items-center gap-2 text-[12px] md:text-[16px]"
-              href={link}
-            >
-              <p>Live Link</p>
-              <FiExternalLink />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+const categories = ["All", "E-Commerce",  "Landing Page", "Dashboard"];
 
 const Portfolio = () => {
-  var settings = {
-    dots: false,
-    infinite: true,
-    arrows: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    centerPadding: "60px",
-    centerMode: true,
-    className: "center",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          centerPadding: "40px",
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 414,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: "20px",
-        },
-      },
-    ],
-  };
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects = activeCategory === "All" 
+    ? projects 
+    : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div
-      id="portfolio"
-      className="bg-[#f8f9fa] dark:bg-[#212529] md:pt-[72px] pt-[200px] md:pb-[100px] pb-[250px] md:min-h-screen md:flex md:items-center"
-    >
+    <section id="portfolio" className="bg-[#f8f9fa] dark:bg-[#212529] py-20 md:py-32">
       <Container>
-        <TitleHeader className="mb-20" Heading="portfolio" Ptext="My work" />
+        <TitleHeader 
+          className="mb-16 md:mb-24" 
+          Heading="portfolio" 
+          Ptext="My Work" 
+        />
 
-        <div>
-          <Slider {...settings}>
-            <SliderCard
-              image={orebi}
-              techs={["HTML5", "Tailwind CSS", "JavaScript", "React"]}
-              name={"OREBI"}
-              link={""}
-            />
-
-            <SliderCard
-              image={gericht}
-              techs={["HTML5", "Tailwind", "jquery", "JavaScript"]}
-              name={"GERICHT"}
-              link={"https://gericht-food-restaurant.vercel.app/"}
-            />
-
-            <SliderCard
-              image={furnishop}
-              techs={["HTML5", "Tailwind CSS", "JavaScript", "React"]}
-              name={"FurniShop"}
-              link={"https://furni-shop-snms.vercel.app"}
-            />
-
-            <SliderCard
-              image={agenc}
-              techs={["HTML5", "Bootstrap", "jquery", "JavaScript"]}
-              name={"Agenc"}
-              link={"https://agenc-snms.vercel.app/"}
-            />
-
-            <SliderCard
-              image={UNIAO}
-              techs={["HTML5", "Tailwind", "JavaScript", "React"]}
-              name={"UNIAO"}
-              link={"https://uniao-one.vercel.app/"}
-            />
-          </Slider>
+        {/* Filter Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-16">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`relative pb-2 text-sm md:text-base font-bold tracking-tight transition-colors duration-300 ${
+                activeCategory === cat 
+                ? "text-[#20c997]" 
+                : "text-gray-400 hover:text-[#252b33] dark:hover:text-white"
+              }`}
+            >
+              {cat}
+              {activeCategory === cat && (
+                <motion.div 
+                  layoutId="activeTab"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#20c997]"
+                />
+              )}
+            </button>
+          ))}
         </div>
+
+        {/* Project Grid */}
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, index) => (
+              <ProjectCard
+                key={project.name}
+                {...project}
+              />
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </Container>
-    </div>
+    </section>
   );
 };
 
