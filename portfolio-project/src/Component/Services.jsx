@@ -23,10 +23,10 @@ const Services = () => {
           Ptext="What i do?"
         />
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           variants={{
             hidden: { opacity: 0 },
             visible: {

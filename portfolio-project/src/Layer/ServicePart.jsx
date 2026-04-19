@@ -6,7 +6,7 @@ const ServicePart = ({ Heading, pText, icon, className }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.02 }}
       className={`flex sm:flex-row items-start sm:items-center gap-x-4 gap-y-4 w-full sm:w-auto p-6 rounded-xl transition-all duration-300 hover:bg-white dark:hover:bg-[#252b33] hover:shadow-xl dark:hover:shadow-none ${className}`}

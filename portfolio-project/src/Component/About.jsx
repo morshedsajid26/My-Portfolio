@@ -13,10 +13,10 @@ const About = () => {
         <TitleHeader Heading="About me" Ptext="Know me more" />
 
         <div className="aboutMe w-full flex flex-col lg:flex-row justify-between my-[48px] gap-6 mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8 }}
             className="text w-full lg:w-full text-center "
           >

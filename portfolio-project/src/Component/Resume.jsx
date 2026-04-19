@@ -19,10 +19,10 @@ const Resume = () => {
         {/* Education and Experience Section */}
         <div className="resume w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
           {/* Education */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8 }}
             className="education flex flex-col gap-6"
           >
@@ -46,10 +46,10 @@ const Resume = () => {
           </motion.div>
 
           {/* Experience */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8 }}
             className="experience flex flex-col gap-6"
           >
@@ -68,10 +68,10 @@ const Resume = () => {
 
         {/* Download CV Button */}
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ delay: 0.4, duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
           <motion.button
             whileHover={{ scale: 1.1 }}
