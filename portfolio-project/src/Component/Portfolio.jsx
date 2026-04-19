@@ -9,13 +9,32 @@ import furnishop from "/Furnishop.png";
 import agenc from "/Agenc.png";
 import gericht from "/Gericht.png";
 import UNIAO from "/UNIAO.png";
+import farmcheck from "/farmcheck.png"
+import aminpass from "/aminpass.png"
+
 
 const projects = [
+  {
+    image: farmcheck,
+    name: "Farm Check",
+    category: "Dashboard",
+    techs: ["ReactJS", "Tailwind CSS", "Framer Motion"],
+    description: "An advanced agricultural management system featuring a data-driven dashboard for farm analytics and a modern landing page for seamless user onboarding.",
+    link: "https://farm-check.vercel.app/",
+  },
+   {
+    image: aminpass,
+    name: "Amin Pass",
+    category: "Dashboard",
+    techs: ["NextJS", "Tailwind CSS", "Framer Motion"],
+    description: "An advanced loyalty management system featuring a data-driven dashboard for systemwoner, staff, business owner and a modern landing page for seamless user onboarding.",
+    link: "https://amin-pass.vercel.app/",
+  },
   {
     image: orebi,
     name: "OREBI E-Commerce",
     category: "E-Commerce",
-    techs: ["React", "Tailwind CSS", "Redux",],
+    techs: ["React", "Tailwind CSS",],
     description: "A premium e-commerce platform featuring complex filtering, cart management, and a high-performance checkout flow.",
     link: "https://orebi-one.vercel.app/",
   },
@@ -23,7 +42,7 @@ const projects = [
     image: gericht,
     name: "Gericht Fine Dining",
     category: "Landing Page",
-    techs: ["React", "CSS3", "Framer Motion"],
+    techs: ["HTML5", "CSS3", "jQuery" ],
     description: "A visually stunning immersive web experience for high-end dining, focusing on elegant typography and transitions.",
     link: "https://gericht-food-restaurant.vercel.app/",
   },
@@ -31,7 +50,7 @@ const projects = [
     image: UNIAO,
     name: "UNIAO Agency",
     category: "Landing Page",
-    techs: ["React", "Framer Motion", "Tailwind"],
+    techs: ["React",  "Tailwind"],
     description: "A bold, modern agency portfolio designed to showcase high-impact services and creative excellence.",
     link: "https://uniao-one.vercel.app/",
   },
@@ -39,7 +58,7 @@ const projects = [
     image: furnishop,
     name: "FurniShop Interiors",
     category: "Landing Page",
-    techs: ["React", "Tailwind CSS", "AOS"],
+    techs: ["React", "Tailwind CSS"],
     description: "Minimalist digital storefront for interior brands, emphasizing clean visual hierarchy and lightning-fast speed.",
     link: "https://furni-shop-snms.vercel.app",
   },
@@ -50,7 +69,7 @@ const projects = [
     techs: ["HTML5", "Bootstrap 5", "jQuery"],
     description: "Performance-oriented professional landing page for creative agencies establishment.",
     link: "https://agenc-snms.vercel.app/",
-  }
+  },
 ];
 
 const categories = ["All", "E-Commerce",  "Landing Page", "Dashboard"];

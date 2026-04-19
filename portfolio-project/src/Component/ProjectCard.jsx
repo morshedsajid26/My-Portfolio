@@ -13,7 +13,7 @@ const ProjectCard = ({ image, name, techs, link, github, description, category }
       className="group relative bg-white dark:bg-[#1a1c21] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-500"
     >
       {/* Image Container */}
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-[19/10] overflow-hidden">
         <img
           src={image}
           alt={name}
@@ -56,7 +56,7 @@ const ProjectCard = ({ image, name, techs, link, github, description, category }
           {name}
         </h3>
         
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed line-clamp-2">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed h-[80px]">
           {description}
         </p>
         
