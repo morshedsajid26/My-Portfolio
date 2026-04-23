@@ -19,7 +19,7 @@ const projects = [
     image: farmcheck,
     name: "Farm Check",
     category: "Dashboard",
-    techs: ["ReactJS", "Tailwind CSS", "Framer Motion"],
+    techs: ["ReactJS", "Tailwind CSS", "Framer Motion","Tanstack Query"],
     description: "An advanced agricultural management system featuring a data-driven dashboard for farm analytics and a modern landing page for seamless user onboarding.",
     link: "https://farm-check.vercel.app/",
   },
