@@ -11,6 +11,7 @@ import gericht from "/Gericht.png";
 import UNIAO from "/UNIAO.png";
 import farmcheck from "/farmcheck.png"
 import aminpass from "/aminpass.png"
+import tugatai from "/tugatai.png"
 
 
 const projects = [
@@ -31,6 +32,14 @@ const projects = [
     link: "https://amin-pass.vercel.app/",
   },
   {
+    image: tugatai,
+    name: "TUGATAI Cargo Logistics",
+    category: "Landing Page",
+    techs: ["NextJS", "Tailwind CSS", "Framer Motion"],
+    description: "A modern, responsive logistics company website designed to streamline cargo booking and tracking processes.",
+    link: "https://tugatai-cargo-logistics.vercel.app/",
+  },
+  {
     image: orebi,
     name: "OREBI E-Commerce",
     category: "E-Commerce",
@@ -40,7 +49,7 @@ const projects = [
   },
   {
     image: gericht,
-    name: "Gericht Fine Dining",
+    name: "Gericht",
     category: "Landing Page",
     techs: ["HTML5", "CSS3", "jQuery" ],
     description: "A visually stunning immersive web experience for high-end dining, focusing on elegant typography and transitions.",
@@ -48,7 +57,7 @@ const projects = [
   },
   {
     image: UNIAO,
-    name: "UNIAO Agency",
+    name: "UNIAO",
     category: "Landing Page",
     techs: ["React",  "Tailwind"],
     description: "A bold, modern agency portfolio designed to showcase high-impact services and creative excellence.",
@@ -56,7 +65,7 @@ const projects = [
   },
   {
     image: furnishop,
-    name: "FurniShop Interiors",
+    name: "FurniShop",
     category: "Landing Page",
     techs: ["React", "Tailwind CSS"],
     description: "Minimalist digital storefront for interior brands, emphasizing clean visual hierarchy and lightning-fast speed.",
@@ -64,7 +73,7 @@ const projects = [
   },
   {
     image: agenc,
-    name: "Agenc Creative",
+    name: "Agenc",
     category: "Landing Page",
     techs: ["HTML5", "Bootstrap 5", "jQuery"],
     description: "Performance-oriented professional landing page for creative agencies establishment.",
