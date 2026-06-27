@@ -12,13 +12,14 @@ import UNIAO from "/UNIAO.png";
 import farmcheck from "/farmcheck.png"
 import aminpass from "/aminpass.png"
 import tugatai from "/tugatai.png"
+import calai from "/calai.png"
 
 
 const projects = [
   {
     image: farmcheck,
     name: "Farm Check",
-    category: "Dashboard",
+    category: "SaaS Project",
     techs: ["ReactJS", "Tailwind CSS", "Framer Motion","Tanstack Query"],
     description: "An advanced agricultural management system featuring a data-driven dashboard for farm analytics and a modern landing page for seamless user onboarding.",
     link: "https://farm-check.vercel.app/",
@@ -26,10 +27,18 @@ const projects = [
    {
     image: aminpass,
     name: "Amin Pass",
-    category: "Dashboard",
+    category: "SaaS Project",
     techs: ["NextJS", "Tailwind CSS", "Framer Motion"],
     description: "An advanced loyalty management system featuring a data-driven dashboard for systemwoner, staff, business owner and a modern landing page for seamless user onboarding.",
     link: "https://amin-pass.vercel.app/",
+  },
+   {
+    image: calai,
+    name: "Calai",
+    category: "SaaS Project",
+    techs: ["ReactJS", "Tailwind CSS", "Framer Motion"],
+    description: "An AI-powered voice ordering platform with role-based dashboards for order management, call analytics, telephony, and subscription billing.",
+    link: "https://calai-fahad.vercel.app",
   },
   {
     image: tugatai,
@@ -81,14 +90,22 @@ const projects = [
   },
 ];
 
-const categories = ["All", "E-Commerce",  "Landing Page", "Dashboard"];
+const categories = ["All", "E-Commerce",  "Landing Page", "SaaS Project"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat);
+    setVisibleCount(6);
+  };
 
   const filteredProjects = activeCategory === "All" 
     ? projects 
     : projects.filter(p => p.category === activeCategory);
+
+  const displayedProjects = filteredProjects.slice(0, visibleCount);
 
   return (
     <section id="portfolio" className="bg-[#f8f9fa] dark:bg-[#212529] py-20 md:py-32">
@@ -104,7 +121,7 @@ const Portfolio = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`relative pb-2 text-sm md:text-base font-bold tracking-tight transition-colors duration-300 ${
                 activeCategory === cat 
                 ? "text-[#20c997]" 
@@ -128,7 +145,7 @@ const Portfolio = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <ProjectCard
                 key={project.name}
                 {...project}
@@ -136,6 +153,24 @@ const Portfolio = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {filteredProjects.length > 6 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-16 flex justify-center"
+          >
+            <button
+              onClick={() => setVisibleCount(prev => prev >= filteredProjects.length ? 6 : prev + 6)}
+              className="group relative px-8 py-3 overflow-hidden rounded-full bg-[#252b33] dark:bg-[#1a1e23] border border-[#20c997]/30 transition-all duration-300 hover:border-[#20c997] hover:shadow-[0_0_20px_rgba(32,201,151,0.2)]"
+            >
+              <span className="relative z-10 font-bold text-sm tracking-wide text-[#20c997] transition-colors duration-300 group-hover:text-white dark:group-hover:text-[#252b33]">
+                {visibleCount >= filteredProjects.length ? "SHOW LESS" : "SHOW MORE"}
+              </span>
+              <div className="absolute inset-0 h-full w-full bg-[#20c997] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            </button>
+          </motion.div>
+        )}
       </Container>
     </section>
   );
